@@ -1,15 +1,13 @@
-package chapter02
+package com.libgdx.example.lwjgl3.chapter02
 
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication
+import chapter02.StarfishCollectorAlpha
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
 
 object LauncherAlpha {
     @JvmStatic
     fun main(args: Array<String>) {
-        LwjglApplication(
-            StarfishCollectorAlpha(),
-            "Starfish Collector",
-            800,
-            600
+        Lwjgl3Application(
+            StarfishCollectorAlpha()
         )
     }
 }

@@ -9,3 +9,4 @@ object HelloLauncher {
         Lwjgl3Application(HelloWorldImage())
     }
 }
+
