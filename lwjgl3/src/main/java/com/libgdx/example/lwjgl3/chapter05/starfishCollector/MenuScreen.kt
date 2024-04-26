@@ -11,16 +11,16 @@ import com.libgdx.example.lwjgl3.chapter05.starfishCollector.BaseGame
 class MenuScreen: BaseScreen() {
     override fun initialize() {
         val ocean = BaseActor(0f, 0f, mainStage)
-        ocean.loadTexture("assets/water.jpg")
+        ocean.loadTexture("chapter05/starfishCollector/water.jpg")
         ocean.setSize(800f, 600f)
 
         val title = BaseActor(0f, 0f, mainStage)
-        title.loadTexture("assets/starfish-collector.png")
+        title.loadTexture("chapter05/starfishCollector/starfish-collector.png")
         /*title.centerAtPosition(400f, 300f)
         title.moveBy(0f, 100f)*/
 
         /*var start = BaseActor(0f, 0f, mainStage)
-        start.loadTexture("assets/message-start.png")
+        start.loadTexture("chapter05/starfishCollector/message-start.png")
         start.centerAtPosition(400f, 300f)
         start.moveBy(0f, -100f)*/
 

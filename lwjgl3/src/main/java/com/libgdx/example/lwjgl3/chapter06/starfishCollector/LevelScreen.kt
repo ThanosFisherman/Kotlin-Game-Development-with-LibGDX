@@ -34,7 +34,7 @@ class LevelScreen: BaseScreen() {
 
     override fun initialize() {
         val ocean = BaseActor(0f, 0f, mainStage)
-        ocean.loadTexture("assets/water-border.jpg")
+        ocean.loadTexture("chapter06/starfishCollector/water-border.jpg")
         ocean.setSize(1200f, 900f)
         BaseActor.setWorldBounds(ocean)
 
@@ -62,7 +62,7 @@ class LevelScreen: BaseScreen() {
 
         val buttonStyle = ButtonStyle()
 
-        val buttonTex = Texture(Gdx.files.internal("assets/undo.png"))
+        val buttonTex = Texture(Gdx.files.internal("chapter06/starfishCollector/undo.png"))
         val buttonRegion = TextureRegion(buttonTex)
         buttonStyle.up = TextureRegionDrawable(buttonRegion)
 
@@ -80,7 +80,7 @@ class LevelScreen: BaseScreen() {
         }
 
         val buttonStyle2 = ButtonStyle()
-        buttonStyle2.up = TextureRegionDrawable(TextureRegion(Texture("assets/pause.png")))
+        buttonStyle2.up = TextureRegionDrawable(TextureRegion(Texture("chapter06/starfishCollector/pause.png")))
         val pauseButton = Button(buttonStyle2)
         pauseButton.color = Color.CYAN
         pauseButton.addListener { e: Event ->
@@ -92,7 +92,7 @@ class LevelScreen: BaseScreen() {
         }
 
         val buttonStyle3 = ButtonStyle()
-        buttonStyle3.up = TextureRegionDrawable(TextureRegion((Texture("assets/audio.png"))))
+        buttonStyle3.up = TextureRegionDrawable(TextureRegion((Texture("chapter06/starfishCollector/audio.png"))))
         val muteButton = Button(buttonStyle3)
         muteButton.color = Color.CYAN
         muteButton.addListener { e: Event ->
@@ -129,10 +129,10 @@ class LevelScreen: BaseScreen() {
         uiTable.row()
         uiTable.add(dialogBox).colspan(6)
 
-        waterDrop = Gdx.audio.newSound(Gdx.files.internal("assets/Water_Drop.ogg"))
-        trumpet = Gdx.audio.newSound(Gdx.files.internal("assets/trumpet.mp3"))
-        instrumental = Gdx.audio.newMusic(Gdx.files.internal("assets/Master_of_the_Feast.ogg"))
-        oceanSurf = Gdx.audio.newMusic(Gdx.files.internal("assets/Ocean_Waves.ogg"))
+        waterDrop = Gdx.audio.newSound(Gdx.files.internal("chapter06/starfishCollector/Water_Drop.ogg"))
+        trumpet = Gdx.audio.newSound(Gdx.files.internal("chapter06/starfishCollector/trumpet.mp3"))
+        instrumental = Gdx.audio.newMusic(Gdx.files.internal("chapter06/starfishCollector/Master_of_the_Feast.ogg"))
+        oceanSurf = Gdx.audio.newMusic(Gdx.files.internal("chapter06/starfishCollector/Ocean_Waves.ogg"))
 
         audioVolume = 1f
         instrumental.isLooping = true
@@ -166,7 +166,7 @@ class LevelScreen: BaseScreen() {
                 win = true
                 trumpet.play()
                 val youWinMessage = BaseActor(0f, 0f, uiStage)
-                youWinMessage.loadTexture("assets/you-win.png")
+                youWinMessage.loadTexture("chapter06/starfishCollector/you-win.png")
                 youWinMessage.centerAtPosition(400f, 300f)
                 youWinMessage.setOpacity(0f)
                 youWinMessage.addAction(Actions.delay(1f))
@@ -196,7 +196,7 @@ class LevelScreen: BaseScreen() {
             if (time <= 0 && !win) {
                 win = false
                 val gameOver = BaseActor(0f, 0f, uiStage)
-                gameOver.loadTexture("assets/game-over.png")
+                gameOver.loadTexture("chapter06/starfishCollector/game-over.png")
                 gameOver.centerAtPosition(400f, 300f)
                 gameOver.setOpacity(0f)
                 gameOver.addAction(Actions.delay(1f))

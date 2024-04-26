@@ -6,7 +6,7 @@ import com.badlogic.gdx.scenes.scene2d.actions.Actions
 
 class Ufo(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     init {
-        loadTexture("assets/ufo.png")
+        loadTexture("chapter04/ufo.png")
         setScale(Constants.scale, Constants.scale)
 
         setBoundaryPolygon(8)

@@ -8,11 +8,11 @@ class MenuScreen : BaseScreen() {
 
     override fun initialize() {
         var space = BaseActor(0f, 0f, mainStage)
-        space.loadTexture("assets/space.png")
+        space.loadTexture("chapter04/space.png")
         space.setSize(800f, 600f)
 
         var start = BaseActor(0f, 0f, mainStage)
-        start.loadTexture("assets/message-start.png")
+        start.loadTexture("chapter04/message-start.png")
         start.centerAtPosition(400f, 300f)
         start.setOpacity(0f)
         start.addAction(Actions.fadeIn(1f))

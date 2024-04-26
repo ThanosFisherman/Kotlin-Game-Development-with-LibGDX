@@ -1,6 +1,5 @@
-package chapter13.spaceRocksGamepad
+package com.libgdx.example.lwjgl3.chapter13.spaceRocksGamepad
 
-import com.badlogic.gdx.controllers.PovDirection
 
 class XBoxGamepad {
     companion object {
@@ -18,10 +17,10 @@ class XBoxGamepad {
         const val BUTTON_RIGHT_STICK: Int  = 9
 
         /* directional pad codes */
-        val DPAD_UP: PovDirection = PovDirection.north
-        val DPAD_DOWN: PovDirection = PovDirection.south
-        val DPAD_RIGHT: PovDirection = PovDirection.east
-        val DPAD_LEFT: PovDirection = PovDirection.west
+//        val DPAD_UP: PovDirection = PovDirection.north
+//        val DPAD_DOWN: PovDirection = PovDirection.south
+//        val DPAD_RIGHT: PovDirection = PovDirection.east
+//        val DPAD_LEFT: PovDirection = PovDirection.west
 
         /* joystick axis codes */
         // X-axis: -1 = left, +1 = right

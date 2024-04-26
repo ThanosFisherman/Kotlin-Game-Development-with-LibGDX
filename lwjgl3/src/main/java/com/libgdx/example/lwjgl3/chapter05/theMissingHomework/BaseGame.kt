@@ -47,7 +47,7 @@ abstract class BaseGame : Game() {
         val im = InputMultiplexer()
         Gdx.input.inputProcessor = im
 
-        val fontGenerator = FreeTypeFontGenerator(Gdx.files.internal("assets/OpenSans.ttf"))
+        val fontGenerator = FreeTypeFontGenerator(Gdx.files.internal("chapter05/theMissingHomework/OpenSans.ttf"))
         val fontParameters = FreeTypeFontParameter()
         fontParameters.size = 24
         fontParameters.color = Color.WHITE
@@ -61,10 +61,10 @@ abstract class BaseGame : Game() {
 
         labelStyle = LabelStyle()
         labelStyle!!.font = customFont
-        /*labelStyle!!.font = BitmapFont(Gdx.files.internal("assets/cooper.fnt"))*/
+        /*labelStyle!!.font = BitmapFont(Gdx.files.internal("chapter05/theMissingHomework/cooper.fnt"))*/
 
         textButtonStyle = TextButtonStyle()
-        val buttonTex = Texture(Gdx.files.internal("assets/button.png"))
+        val buttonTex = Texture(Gdx.files.internal("chapter05/theMissingHomework/button.png"))
         val buttonPatch = NinePatch(buttonTex, 24, 24, 24, 24)
         textButtonStyle!!.up = NinePatchDrawable(buttonPatch)
         textButtonStyle!!.font = customFont

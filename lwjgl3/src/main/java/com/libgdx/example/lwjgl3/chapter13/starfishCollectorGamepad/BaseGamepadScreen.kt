@@ -1,10 +1,9 @@
-package chapter13.starfishCollectorGamepad
+package com.libgdx.example.lwjgl3.chapter13.starfishCollectorGamepad
 
-import com.badlogic.gdx.controllers.ControllerListener
+import chapter13.starfishCollectorGamepad.BaseScreen
 import com.badlogic.gdx.controllers.Controller
+import com.badlogic.gdx.controllers.ControllerListener
 import com.badlogic.gdx.controllers.Controllers
-import com.badlogic.gdx.controllers.PovDirection
-import com.badlogic.gdx.math.Vector3
 
 abstract class BaseGamepadScreen : BaseScreen(), ControllerListener {
     init {
@@ -19,21 +18,6 @@ abstract class BaseGamepadScreen : BaseScreen(), ControllerListener {
 
     override fun disconnected(controller: Controller) {}
 
-    override fun xSliderMoved(controller: Controller, sliderCode: Int, value: Boolean): Boolean {
-        return false
-    }
-
-    override fun ySliderMoved(controller: Controller, sliderCode: Int, value: Boolean): Boolean {
-        return false
-    }
-
-    override fun accelerometerMoved(controller: Controller, accelerometerCode: Int, value: Vector3): Boolean {
-        return false
-    }
-
-    override fun povMoved(controller: Controller, povCode: Int, value: PovDirection): Boolean {
-        return false
-    }
 
     override fun axisMoved(controller: Controller, axisCode: Int, value: Float): Boolean {
         return false

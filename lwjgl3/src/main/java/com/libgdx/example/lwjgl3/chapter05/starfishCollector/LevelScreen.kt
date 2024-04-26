@@ -30,7 +30,7 @@ class LevelScreen: BaseScreen() {
 
     override fun initialize() {
         val ocean = BaseActor(0f, 0f, mainStage)
-        ocean.loadTexture("assets/water-border.jpg")
+        ocean.loadTexture("chapter05/starfishCollector/water-border.jpg")
         ocean.setSize(1200f, 900f)
         BaseActor.setWorldBounds(ocean)
 
@@ -58,7 +58,7 @@ class LevelScreen: BaseScreen() {
 
         val buttonStyle = ButtonStyle()
 
-        val buttonTex = Texture(Gdx.files.internal("assets/undo.png"))
+        val buttonTex = Texture(Gdx.files.internal("chapter05/starfishCollector/undo.png"))
         val buttonRegion = TextureRegion(buttonTex)
         buttonStyle.up = TextureRegionDrawable(buttonRegion)
 
@@ -75,7 +75,7 @@ class LevelScreen: BaseScreen() {
         }
 
         val buttonStyle2 = ButtonStyle()
-        buttonStyle2.up = TextureRegionDrawable(TextureRegion(Texture("assets/pause.png")))
+        buttonStyle2.up = TextureRegionDrawable(TextureRegion(Texture("chapter05/starfishCollector/pause.png")))
         val pauseButton = Button(buttonStyle2)
         pauseButton.color = Color.CYAN
         pauseButton.addListener { e: Event ->
@@ -131,7 +131,7 @@ class LevelScreen: BaseScreen() {
             if (BaseActor.count(mainStage, Starfish::class.java.canonicalName) == 0 && !win && time >= 0f) {
                 win = true
                 val youWinMessage = BaseActor(0f, 0f, uiStage)
-                youWinMessage.loadTexture("assets/you-win.png")
+                youWinMessage.loadTexture("chapter05/starfishCollector/you-win.png")
                 youWinMessage.centerAtPosition(400f, 300f)
                 youWinMessage.setOpacity(0f)
                 youWinMessage.addAction(Actions.delay(1f))
@@ -160,7 +160,7 @@ class LevelScreen: BaseScreen() {
             if (time <= 0 && !win) {
                 win = false
                 val gameOver = BaseActor(0f, 0f, uiStage)
-                gameOver.loadTexture("assets/game-over.png")
+                gameOver.loadTexture("chapter05/starfishCollector/game-over.png")
                 gameOver.centerAtPosition(400f, 300f)
                 gameOver.setOpacity(0f)
                 gameOver.addAction(Actions.delay(1f))

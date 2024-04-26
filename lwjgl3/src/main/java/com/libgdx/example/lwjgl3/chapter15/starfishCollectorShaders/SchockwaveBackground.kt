@@ -1,12 +1,12 @@
-package chapter15.starfishCollectorShaders
+package com.libgdx.example.lwjgl3.chapter15.starfishCollectorShaders
 
+import chapter15.starfishCollectorShaders.BaseActor
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.g2d.Batch
 import com.badlogic.gdx.graphics.glutils.ShaderProgram
 import com.badlogic.gdx.math.Vector2
 import com.badlogic.gdx.math.Vector3
 import com.badlogic.gdx.scenes.scene2d.Stage
-import org.junit.jupiter.api.extension.ConditionEvaluationResult.disabled
 import com.badlogic.gdx.scenes.scene2d.actions.Actions
 import com.badlogic.gdx.scenes.scene2d.actions.RunnableAction
 

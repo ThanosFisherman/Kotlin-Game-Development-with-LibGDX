@@ -1,5 +1,6 @@
-package chapter13.rectangleDestroyerGamepad
+package com.libgdx.example.lwjgl3.chapter13.rectangleDestroyerGamepad
 
+import chapter13.rectangleDestroyerGamepad.BaseScreen
 import com.badlogic.gdx.controllers.Controller
 import com.badlogic.gdx.controllers.ControllerListener
 import com.badlogic.gdx.controllers.Controllers

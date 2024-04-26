@@ -35,7 +35,7 @@ class StoryScreen : BaseScreen() {
         dialogBox.isVisible = false
 
         continueKey = BaseActor(0f, 0f, uiStage)
-        continueKey.loadTexture("assets/key-C.png")
+        continueKey.loadTexture("chapter05/theMissingHomework/key-C.png")
         continueKey.setSize(32f, 32f)
         continueKey.isVisible = false
 
@@ -53,7 +53,7 @@ class StoryScreen : BaseScreen() {
         uiTable.bottom()
 
         theEnd = BaseActor(0f, 0f, mainStage)
-        theEnd.loadTexture("assets/the-end.png")
+        theEnd.loadTexture("chapter05/theMissingHomework/the-end.png")
         theEnd.centerAtActor(background)
         theEnd.setScale(2f)
         theEnd.setOpacity(0f)

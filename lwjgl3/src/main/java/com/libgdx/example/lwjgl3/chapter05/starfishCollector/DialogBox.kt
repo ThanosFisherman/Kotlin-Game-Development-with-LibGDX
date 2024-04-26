@@ -11,7 +11,7 @@ class DialogBox(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     private val padding = 16f
 
     init {
-        loadTexture("assets/dialog-translucent.png")
+        loadTexture("chapter05/starfishCollector/dialog-translucent.png")
         dialogLabel = Label(" ", BaseGame.labelStyle)
         dialogLabel.setWrap(true)
         dialogLabel.setAlignment(Align.topLeft)

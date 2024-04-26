@@ -8,6 +8,8 @@ import com.badlogic.gdx.controllers.Controller
 import com.badlogic.gdx.math.MathUtils
 import com.badlogic.gdx.scenes.scene2d.Actor
 import com.badlogic.gdx.scenes.scene2d.actions.Actions
+import com.libgdx.example.lwjgl3.chapter13.spaceRocksGamepad.BaseGamepadScreen
+import com.libgdx.example.lwjgl3.chapter13.spaceRocksGamepad.XBoxGamepad
 
 class LevelScreen : BaseGamepadScreen() {
 

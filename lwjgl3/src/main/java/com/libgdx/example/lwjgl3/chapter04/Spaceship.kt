@@ -15,7 +15,7 @@ class Spaceship(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     init {
         this.s = s
 
-        loadTexture("assets/spaceship.png")
+        loadTexture("chapter04/spaceship.png")
         setScale(Constants.scale, Constants.scale)
         setBoundaryPolygon(8)
 

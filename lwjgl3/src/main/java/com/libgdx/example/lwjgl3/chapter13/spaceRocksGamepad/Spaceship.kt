@@ -8,6 +8,7 @@ import com.badlogic.gdx.audio.Sound
 import com.badlogic.gdx.controllers.Controllers
 import com.badlogic.gdx.math.MathUtils
 import com.badlogic.gdx.math.Vector2
+import com.libgdx.example.lwjgl3.chapter13.spaceRocksGamepad.XBoxGamepad
 
 class Spaceship(x: Float, y: Float, private val s: Stage) : BaseActor(x, y, s) {
 

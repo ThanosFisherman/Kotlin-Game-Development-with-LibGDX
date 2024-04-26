@@ -8,7 +8,7 @@ class Starfish(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     private var collected: Boolean = false
 
     init {
-        loadTexture("assets/starfish.png")
+        loadTexture("chapter05/starfishCollector/starfish.png")
         setBoundaryPolygon(8)
 
         // Actions

@@ -1,4 +1,4 @@
-package chapter02
+package com.libgdx.example.lwjgl3.chapter02
 
 import com.badlogic.gdx.Game
 import com.badlogic.gdx.Gdx
@@ -29,7 +29,7 @@ class StarfishCollectorAlpha : Game() {
     override fun create() {
         batch = SpriteBatch()
 
-        turtleTexture = Texture(Gdx.files.internal("assets/turtle-1.png"))
+        turtleTexture = Texture(Gdx.files.internal("chapter02/turtle-1.png"))
         turtleRectangle = Rectangle(
             turtleX,
             turtleY,
@@ -37,7 +37,7 @@ class StarfishCollectorAlpha : Game() {
             turtleTexture.height.toFloat()
         )
 
-        starfishTexture = Texture(Gdx.files.internal("assets/starfish.png"))
+        starfishTexture = Texture(Gdx.files.internal("chapter02/starfish.png"))
         starfishRectangle = Rectangle(
             starfishX,
             starfishY,
@@ -45,8 +45,8 @@ class StarfishCollectorAlpha : Game() {
             starfishTexture.height.toFloat()
         )
 
-        oceanTexture = Texture(Gdx.files.internal("assets/water.jpg"))
-        winMessageTexture = Texture(Gdx.files.internal("assets/you-win.png"))
+        oceanTexture = Texture(Gdx.files.internal("chapter02/water.jpg"))
+        winMessageTexture = Texture(Gdx.files.internal("chapter02/you-win.png"))
     }
 
     override fun render() {

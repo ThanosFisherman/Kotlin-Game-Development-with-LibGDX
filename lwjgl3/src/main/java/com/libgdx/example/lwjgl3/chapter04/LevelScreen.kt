@@ -20,7 +20,7 @@ class LevelScreen : BaseScreen() {
 
     override fun initialize() {
         var space = BaseActor(0f, 0f, mainStage)
-        space.loadTexture("assets/space.png")
+        space.loadTexture("chapter04/space.png")
         space.setSize(800f, 600f)
 
         BaseActor.setWorldBounds(space)
@@ -147,7 +147,7 @@ class LevelScreen : BaseScreen() {
     private fun gameOver(win: Boolean) {
         if (win) {
             var messageWin = BaseActor(0f, 0f, uiStage)
-            messageWin.loadTexture("assets/message-win.png")
+            messageWin.loadTexture("chapter04/message-win.png")
             messageWin.centerAtPosition(400f, 300f)
             messageWin.setOpacity(0f)
             messageWin.addAction(Actions.fadeIn(1f))
@@ -155,7 +155,7 @@ class LevelScreen : BaseScreen() {
         }
         else {
             var messageLose = BaseActor(0f, 0f, uiStage)
-            messageLose.loadTexture("assets/message-lose.png")
+            messageLose.loadTexture("chapter04/message-lose.png")
             messageLose.centerAtPosition(400f, 300f)
             messageLose.setOpacity(0f)
             messageLose.addAction(Actions.fadeIn(1f))

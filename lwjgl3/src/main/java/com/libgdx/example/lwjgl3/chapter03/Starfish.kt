@@ -3,12 +3,13 @@ package chapter03
 import com.badlogic.gdx.scenes.scene2d.Action
 import com.badlogic.gdx.scenes.scene2d.Stage
 import com.badlogic.gdx.scenes.scene2d.actions.Actions
+import com.libgdx.example.lwjgl3.chapter03.BaseActor
 
 class Starfish(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     private var collected: Boolean = false
 
     init {
-        loadTexture("assets/starfish.png")
+        loadTexture("chapter03/starfish.png")
         setBoundaryPolygon(8)
 
         // Actions

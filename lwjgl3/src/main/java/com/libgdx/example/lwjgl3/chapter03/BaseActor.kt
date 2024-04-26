@@ -1,4 +1,4 @@
-package chapter03
+package com.libgdx.example.lwjgl3.chapter03
 
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.g2d.Animation
@@ -36,7 +36,7 @@ open class BaseActor(x: Float, y: Float, s: Stage) : Actor() {
         this.y = y
         s.addActor(this)
         animation = null
-    }    
+    }
 
     override fun act(dt: Float) {
         super.act(dt)
@@ -67,7 +67,7 @@ open class BaseActor(x: Float, y: Float, s: Stage) : Actor() {
             )
         }
     }
-    
+
     // Graphics ---------------------------------------------------------------------------------------------------
     fun setAnimation(anim: Animation<TextureRegion>) {
         animation = anim
@@ -156,11 +156,11 @@ open class BaseActor(x: Float, y: Float, s: Stage) : Actor() {
 
     fun getSpeed() = velocityVec.len()
     fun setMotionAngle(angle: Float) = velocityVec.setAngle(angle)
-    fun getMotionAngle() = velocityVec.angle()
+    fun getMotionAngle() = velocityVec.angleDeg()
     fun isMoving() = getSpeed() > 0
 
     fun setAcceleration(acc: Float) { acceleration = acc }
-    fun accelerateAtAngle(angle: Float) = accelerationVec.add( Vector2(acceleration, 0f).setAngle(angle))
+    fun accelerateAtAngle(angle: Float) = accelerationVec.add( Vector2(acceleration, 0f).setAngleDeg(angle))
     fun accelerateForward() = accelerateAtAngle(getRotation())
     fun setMaxSpeed(ms: Float) { maxSpeed = ms }
     fun setDeceleration(dec: Float) { deceleration = dec }

@@ -10,11 +10,11 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton
 class MenuScreen : BaseScreen() {
     override fun initialize() {
         val background = BaseActor(0f, 0f, mainStage)
-        background.loadTexture("assets/notebook.jpg")
+        background.loadTexture("chapter05/theMissingHomework/notebook.jpg")
         background.setSize(800f, 600f)
 
         val title = BaseActor(0f, 0f, mainStage)
-        title.loadTexture("assets/missing-homework.png")
+        title.loadTexture("chapter05/theMissingHomework/missing-homework.png")
 
         val startButton = TextButton("Start", BaseGame.textButtonStyle)
         startButton.addListener { e: Event ->

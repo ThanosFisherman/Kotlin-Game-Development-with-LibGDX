@@ -11,13 +11,13 @@ class StoryScreen: BaseScreen() {
 
     override fun initialize() {
         val background = BaseActor(0f, 0f, mainStage)
-        background.loadTexture("assets/oceanside.png")
+        background.loadTexture("chapter05/starfishCollector/oceanside.png")
         background.setSize(800f, 600f)
         background.setOpacity(0f)
         BaseActor.setWorldBounds(background)
 
         val turtle = BaseActor(0f, 0f, mainStage)
-        turtle.loadTexture("assets/turtle-big.png")
+        turtle.loadTexture("chapter05/starfishCollector/turtle-big.png")
         turtle.setPosition(-turtle.width, 0f)
 
         val dialogBox = DialogBox(0f, 0f, uiStage)
@@ -29,7 +29,7 @@ class StoryScreen: BaseScreen() {
         uiTable.add(dialogBox).expandX().expandY().bottom()
 
         continueKey = BaseActor(0f, 0f, uiStage)
-        continueKey.loadTexture("assets/key-C.png")
+        continueKey.loadTexture("chapter05/starfishCollector/key-C.png")
         continueKey.setSize(32f, 32f)
         continueKey.isVisible = false
 

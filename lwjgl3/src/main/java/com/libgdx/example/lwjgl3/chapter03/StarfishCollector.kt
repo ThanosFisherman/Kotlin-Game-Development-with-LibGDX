@@ -1,6 +1,8 @@
 package chapter03
 
 import com.badlogic.gdx.scenes.scene2d.actions.Actions
+import com.libgdx.example.lwjgl3.chapter03.BaseActor
+import com.libgdx.example.lwjgl3.chapter03.Rock
 
 class StarfishCollector: GameBeta() {
 
@@ -9,7 +11,7 @@ class StarfishCollector: GameBeta() {
 
     override fun initialize() {
         val ocean = BaseActor(0f, 0f, mainStage)
-        ocean.loadTexture("assets/water-border.jpg")
+        ocean.loadTexture("chapter03/water-border.jpg")
         ocean.setSize(1200f, 900f)
         BaseActor.setWorldBounds(ocean)
 

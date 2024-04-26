@@ -1,10 +1,10 @@
-package chapter13.rectangleDestroyerGamepad
+package com.libgdx.example.lwjgl3.chapter13.rectangleDestroyerGamepad
 
+import chapter13.rectangleDestroyerGamepad.*
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.audio.Music
 import com.badlogic.gdx.audio.Sound
 import com.badlogic.gdx.controllers.Controller
-import com.badlogic.gdx.controllers.Controllers
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.math.MathUtils
 import com.badlogic.gdx.scenes.scene2d.ui.Label
@@ -108,134 +108,134 @@ class LevelScreen : BaseGamepadScreen() {
 
     override fun update(dt: Float) {
         // player input
-        if (Controllers.getControllers().size > 0) {
-            val gamepad = Controllers.getControllers().get(0)
-            val direction = gamepad.getPov(0)
-            if (direction == PovDirection.east)
-                padX += 8
-            else if (direction == PovDirection.west)
-                padX -= 8
-            if (!paddleStop) paddle.x = padX - paddle.width / 2
-        } else {
-            val mouseX = Gdx.input.x
-            if (!paddleStop) paddle.x = mouseX - paddle.width / 2
-        }
-        paddle.boundToWorld()
-        // ---
-
-        if ( ball.isPaused() ) {
-            ball.x = paddle.x + paddle.width / 2 - ball.width / 2
-            ball.y = paddle.y + paddle.height / 2 + ball.height / 2
-        }
-
-        for (wall: BaseActor in BaseActor.getList(mainStage, Wall::class.java.canonicalName)) {
-            if (ball.overlaps(wall)) {
-                ball.bounceOff((wall))
-                wallBumpSound.play()
-            }
-        }
-
-        for (brick: BaseActor in BaseActor.getList(mainStage, Brick::class.java.canonicalName)) {
-            if (ball.overlaps(brick)) {
-                ball.bounceOff(brick)
-                val explosion = Explosion(brick.x, brick.y, mainStage)
-                explosion.height = brick.height
-                explosion.centerAtActor(brick)
-                brick.remove()
-                score += 100
-                scoreLabel.setText(("Score: $score"))
-
-                val spawnProbability = 10
-                if (MathUtils.random(0, 100) < spawnProbability) {
-                    val i = Item(0f, 0f, mainStage)
-                    i.centerAtActor(brick)
-                    itemAppearSound.play()
-                }
-
-                brickBumpSound.play()
-            }
-        }
-
-        if (ball.overlaps(paddle)) {
-            val ballCenterX = ball.x + ball.width / 2
-            val paddlePercentHit = (ballCenterX - paddle.x) / paddle.width
-            val bounceAngle = MathUtils.lerp(150f, 30f, paddlePercentHit)
-            ball.setMotionAngle(bounceAngle)
-            bounceSound.play()
-        }
-
-        if (BaseActor.count(mainStage, Brick::class.java.canonicalName) == 0 && !gameOver) {
-            messageLabel.setText("You win!")
-            messageLabel.color = Color.LIME
-            messageLabel.isVisible = true
-            gameWin.play()
-            gameOver = true
-        }
-
-        if (ball.y < -50 && BaseActor.count(mainStage, Brick::class.java.canonicalName) > 0) {
-            ball.remove()
-
-            if (balls > 0) {
-                balls -= 1
-                ballsLabel.setText("Balls: $balls")
-                ball = Ball(0f, 0f, mainStage)
-
-                messageLabel.setText("Click to start")
-                messageLabel.color = Color.CYAN
-                messageLabel.isVisible = true
-                ballLost.play()
-            } else if(!gameOver){
-                messageLabel.setText("Game Over")
-                messageLabel.color = Color.RED
-                messageLabel.isVisible = true
-                gameOverSound.play()
-                gameOver = true
-            }
-        }
-
-        for (item: BaseActor in BaseActor.getList(mainStage, Item::class.java.canonicalName)) {
-            if (paddle.overlaps(item)) {
-                val realItem = item as Item
-
-                when {
-                    realItem.getType() == Item.Type.PADDLE_EXPAND -> paddle.width = paddle.width * 1.25f
-                    realItem.getType() == Item.Type.PADDLE_SHRINK -> paddle.width = paddle.width * .8f
-                    realItem.getType() == Item.Type.BALL_SPEED_UP -> ball.setSpeed(ball.getSpeed() * 1.5f)
-                    realItem.getType() == Item.Type.BALL_SPEED_DOWN -> ball.setSpeed(ball.getSpeed() * .9f)
-                    realItem.getType() == Item.Type.PADDLE_STOP -> paddleStop = true
-                    realItem.getType() == Item.Type.BRICK_DESTROY -> destroyRandomBrick()
-                    realItem.getType() == Item.Type.BALL_LARGE -> scaleBall(1.2f)
-                    realItem.getType() == Item.Type.BALL_SMALL -> scaleBall(.8f)
-                    realItem.getType() == Item.Type.BALL_EXTRA -> extraBall()
-                    realItem.getType() == Item.Type.BONUS_POINTS -> bonusPoints()
-                }
-
-                paddle.setBoundaryRectangle()
-                item.remove()
-                itemCollectSound.play()
-            }
-        }
-
-        if (paddleStop) {
-            paddleTimer += dt
-            if (paddleTimer > 1) {
-                paddleStop = false
-                paddleTimer = 0f
-            }
-        }
-
-        for (solid: BaseActor in BaseActor.getList(mainStage, Solid::class.java.canonicalName)) {
-            if (ball.overlaps(solid)) {
-                ball.bounceOff(solid)
-                brickBumpSound.play()
-
-                val r = MathUtils.random()
-                val g = MathUtils.random()
-                val b = MathUtils.random()
-                val randomColor = Color(r, g, b, 1f)
-                solid.color = randomColor
-            }
-        }
+//        if (Controllers.getControllers().size > 0) {
+//            val gamepad = Controllers.getControllers().get(0)
+//            val direction = gamepad.getPov(0)
+//            if (direction == PovDirection.east)
+//                padX += 8
+//            else if (direction == PovDirection.west)
+//                padX -= 8
+//            if (!paddleStop) paddle.x = padX - paddle.width / 2
+//        } else {
+//            val mouseX = Gdx.input.x
+//            if (!paddleStop) paddle.x = mouseX - paddle.width / 2
+//        }
+//        paddle.boundToWorld()
+//        // ---
+//
+//        if ( ball.isPaused() ) {
+//            ball.x = paddle.x + paddle.width / 2 - ball.width / 2
+//            ball.y = paddle.y + paddle.height / 2 + ball.height / 2
+//        }
+//
+//        for (wall: BaseActor in BaseActor.getList(mainStage, Wall::class.java.canonicalName)) {
+//            if (ball.overlaps(wall)) {
+//                ball.bounceOff((wall))
+//                wallBumpSound.play()
+//            }
+//        }
+//
+//        for (brick: BaseActor in BaseActor.getList(mainStage, Brick::class.java.canonicalName)) {
+//            if (ball.overlaps(brick)) {
+//                ball.bounceOff(brick)
+//                val explosion = Explosion(brick.x, brick.y, mainStage)
+//                explosion.height = brick.height
+//                explosion.centerAtActor(brick)
+//                brick.remove()
+//                score += 100
+//                scoreLabel.setText(("Score: $score"))
+//
+//                val spawnProbability = 10
+//                if (MathUtils.random(0, 100) < spawnProbability) {
+//                    val i = Item(0f, 0f, mainStage)
+//                    i.centerAtActor(brick)
+//                    itemAppearSound.play()
+//                }
+//
+//                brickBumpSound.play()
+//            }
+//        }
+//
+//        if (ball.overlaps(paddle)) {
+//            val ballCenterX = ball.x + ball.width / 2
+//            val paddlePercentHit = (ballCenterX - paddle.x) / paddle.width
+//            val bounceAngle = MathUtils.lerp(150f, 30f, paddlePercentHit)
+//            ball.setMotionAngle(bounceAngle)
+//            bounceSound.play()
+//        }
+//
+//        if (BaseActor.count(mainStage, Brick::class.java.canonicalName) == 0 && !gameOver) {
+//            messageLabel.setText("You win!")
+//            messageLabel.color = Color.LIME
+//            messageLabel.isVisible = true
+//            gameWin.play()
+//            gameOver = true
+//        }
+//
+//        if (ball.y < -50 && BaseActor.count(mainStage, Brick::class.java.canonicalName) > 0) {
+//            ball.remove()
+//
+//            if (balls > 0) {
+//                balls -= 1
+//                ballsLabel.setText("Balls: $balls")
+//                ball = Ball(0f, 0f, mainStage)
+//
+//                messageLabel.setText("Click to start")
+//                messageLabel.color = Color.CYAN
+//                messageLabel.isVisible = true
+//                ballLost.play()
+//            } else if(!gameOver){
+//                messageLabel.setText("Game Over")
+//                messageLabel.color = Color.RED
+//                messageLabel.isVisible = true
+//                gameOverSound.play()
+//                gameOver = true
+//            }
+//        }
+//
+//        for (item: BaseActor in BaseActor.getList(mainStage, Item::class.java.canonicalName)) {
+//            if (paddle.overlaps(item)) {
+//                val realItem = item as Item
+//
+//                when {
+//                    realItem.getType() == Item.Type.PADDLE_EXPAND -> paddle.width = paddle.width * 1.25f
+//                    realItem.getType() == Item.Type.PADDLE_SHRINK -> paddle.width = paddle.width * .8f
+//                    realItem.getType() == Item.Type.BALL_SPEED_UP -> ball.setSpeed(ball.getSpeed() * 1.5f)
+//                    realItem.getType() == Item.Type.BALL_SPEED_DOWN -> ball.setSpeed(ball.getSpeed() * .9f)
+//                    realItem.getType() == Item.Type.PADDLE_STOP -> paddleStop = true
+//                    realItem.getType() == Item.Type.BRICK_DESTROY -> destroyRandomBrick()
+//                    realItem.getType() == Item.Type.BALL_LARGE -> scaleBall(1.2f)
+//                    realItem.getType() == Item.Type.BALL_SMALL -> scaleBall(.8f)
+//                    realItem.getType() == Item.Type.BALL_EXTRA -> extraBall()
+//                    realItem.getType() == Item.Type.BONUS_POINTS -> bonusPoints()
+//                }
+//
+//                paddle.setBoundaryRectangle()
+//                item.remove()
+//                itemCollectSound.play()
+//            }
+//        }
+//
+//        if (paddleStop) {
+//            paddleTimer += dt
+//            if (paddleTimer > 1) {
+//                paddleStop = false
+//                paddleTimer = 0f
+//            }
+//        }
+//
+//        for (solid: BaseActor in BaseActor.getList(mainStage, Solid::class.java.canonicalName)) {
+//            if (ball.overlaps(solid)) {
+//                ball.bounceOff(solid)
+//                brickBumpSound.play()
+//
+//                val r = MathUtils.random()
+//                val g = MathUtils.random()
+//                val b = MathUtils.random()
+//                val randomColor = Color(r, g, b, 1f)
+//                solid.color = randomColor
+//            }
+//        }
     }
 
     override fun touchDown(screenX: Int, screenY: Int, pointer: Int, button: Int): Boolean {

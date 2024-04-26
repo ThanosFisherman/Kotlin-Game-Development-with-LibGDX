@@ -13,8 +13,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable
 import com.badlogic.gdx.audio.Sound
 import com.badlogic.gdx.audio.Music
-import com.badlogic.gdx.scenes.scene2d.InputEvent
-import com.badlogic.gdx.scenes.scene2d.utils.ClickListener
+import com.libgdx.example.lwjgl3.chapter15.starfishCollectorShaders.SchockwaveBackground
 
 
 class LevelScreen: BaseScreen() {

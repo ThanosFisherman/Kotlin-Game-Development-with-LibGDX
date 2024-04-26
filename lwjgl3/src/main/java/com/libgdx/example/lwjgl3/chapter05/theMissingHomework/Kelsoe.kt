@@ -12,10 +12,10 @@ class Kelsoe(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     val embarrased: Animation<TextureRegion>
 
     init {
-        normal = loadTexture("assets/kelsoe-normal.png")
-        sad = loadTexture("assets/kelsoe-sad.png")
-        lookLeft = loadTexture("assets/kelsoe-look-left.png")
-        lookRight = loadTexture("assets/kelsoe-look-right.png")
-        embarrased = loadTexture("assets/kelsoe-embarrased.png")
+        normal = loadTexture("chapter05/theMissingHomework/kelsoe-normal.png")
+        sad = loadTexture("chapter05/theMissingHomework/kelsoe-sad.png")
+        lookLeft = loadTexture("chapter05/theMissingHomework/kelsoe-look-left.png")
+        lookRight = loadTexture("chapter05/theMissingHomework/kelsoe-look-right.png")
+        embarrased = loadTexture("chapter05/theMissingHomework/kelsoe-embarrased.png")
     }
 }

@@ -6,6 +6,9 @@ import com.badlogic.gdx.scenes.scene2d.Event
 import com.badlogic.gdx.scenes.scene2d.actions.Actions
 import com.badlogic.gdx.scenes.scene2d.ui.Label
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton
+import com.libgdx.example.lwjgl3.chapter13.rectangleDestroyerGamepad.BaseGamepadScreen
+import com.libgdx.example.lwjgl3.chapter13.rectangleDestroyerGamepad.LevelScreen
+import com.libgdx.example.lwjgl3.chapter13.rectangleDestroyerGamepad.XBoxGamepad
 
 class MenuScreen : BaseGamepadScreen() {
     private lateinit var background: BaseActor
