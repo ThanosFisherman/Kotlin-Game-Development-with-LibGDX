@@ -3,6 +3,7 @@ package chapter05.starfishCollector
 import com.badlogic.gdx.Input.Keys
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.scenes.scene2d.actions.Actions
+import com.libgdx.example.lwjgl3.chapter05.starfishCollector.BaseGame
 
 class StoryScreen2: BaseScreen() {
     lateinit var scene: Scene

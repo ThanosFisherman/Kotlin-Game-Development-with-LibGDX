@@ -1,10 +1,21 @@
-package chapter08
+package com.libgdx.example.lwjgl3.chapter08
 
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication
+import chapter08.RectangleDestroyer
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration
+
 
 object Launcher {
+
     @JvmStatic
     fun main(args: Array<String>) {
-        LwjglApplication(RectangleDestroyer(), "Rectangle Destroyer", 800, 600)
+
+        val config =
+            Lwjgl3ApplicationConfiguration().apply {
+                setWindowedMode(800, 600)
+                setTitle("Rectangle Destroyer")
+            }
+
+        Lwjgl3Application(RectangleDestroyer(), config)
     }
 }

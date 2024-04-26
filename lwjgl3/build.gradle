@@ -15,6 +15,10 @@ buildscript {
     }
   }
 }
+plugins {
+  id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
 apply plugin: 'org.jetbrains.kotlin.jvm'
 
 if (JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_14)) {
@@ -37,14 +41,25 @@ tasks.withType(KotlinCompile).configureEach {
   }
 }
 
+javafx {
+  version = "22.0.1"
+  modules = [ 'javafx.controls' ]
+}
+
 dependencies {
   implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+  implementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
   implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
   implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
   implementation "io.github.libktx:ktx-app:$ktxVersion"
   implementation "io.github.libktx:ktx-assets:$ktxVersion"
   implementation "io.github.libktx:ktx-graphics:$ktxVersion"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+  implementation "com.badlogicgames.gdx-controllers:gdx-controllers-core:$gdxControllersVersion"
+  implementation "com.badlogicgames.gdx-controllers:gdx-controllers-desktop:$gdxControllersVersion"
+  implementation 'org.openjfx:javafx-swing:22.0.1'
+
+
 }
 
 def jarName = "${appName}-${version}.jar"

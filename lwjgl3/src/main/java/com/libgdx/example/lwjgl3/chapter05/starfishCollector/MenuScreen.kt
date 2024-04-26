@@ -6,6 +6,7 @@ import com.badlogic.gdx.scenes.scene2d.Event
 import com.badlogic.gdx.scenes.scene2d.InputEvent
 import com.badlogic.gdx.scenes.scene2d.InputEvent.Type
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton
+import com.libgdx.example.lwjgl3.chapter05.starfishCollector.BaseGame
 
 class MenuScreen: BaseScreen() {
     override fun initialize() {

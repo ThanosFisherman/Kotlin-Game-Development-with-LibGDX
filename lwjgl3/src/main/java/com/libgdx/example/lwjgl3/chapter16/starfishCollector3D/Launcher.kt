@@ -1,11 +1,20 @@
-package chapter16.starfishCollector3D
+package com.libgdx.example.lwjgl3.chapter16.starfishCollector3D
 
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication
+import chapter16.starfishCollector3D.CubeDemo
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration
 
 object Launcher {
+
     @JvmStatic
     fun main(args: Array<String>) {
-        val myGame = CubeDemo()
-        LwjglApplication(myGame, "Cube Demo", 800, 600)
+
+        val config =
+            Lwjgl3ApplicationConfiguration().apply {
+                setWindowedMode(800, 600)
+                setTitle("Cube Demo")
+            }
+
+        Lwjgl3Application(CubeDemo(), config)
     }
 }

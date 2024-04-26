@@ -1,10 +1,11 @@
-package chapter06.rhythmTapper
+package com.libgdx.example.lwjgl3.chapter06.rhythmTapper
 
-import javafx.embed.swing.JFXPanel
-import javafx.application.Platform
-import javafx.stage.FileChooser
+
 import java.io.File
 import com.badlogic.gdx.files.FileHandle
+import javafx.application.Platform
+import javafx.embed.swing.JFXPanel
+import javafx.stage.FileChooser
 
 object FileUtils {
     private var finished: Boolean = false

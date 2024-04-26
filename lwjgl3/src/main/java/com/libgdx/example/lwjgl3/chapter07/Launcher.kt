@@ -1,15 +1,21 @@
-package chapter07
+package com.libgdx.example.lwjgl3.chapter07
 
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication
+import chapter07.PlaneDodgerGame
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration
+
 
 object Launcher {
+
     @JvmStatic
     fun main(args: Array<String>) {
-        LwjglApplication(
-            PlaneDodgerGame(),
-            "Plane Dodger",
-            800,
-            600
-        )
+
+        val config =
+            Lwjgl3ApplicationConfiguration().apply {
+                setWindowedMode(800, 600)
+                setTitle("Plane Dodge")
+            }
+
+        Lwjgl3Application(PlaneDodgerGame(), config)
     }
 }

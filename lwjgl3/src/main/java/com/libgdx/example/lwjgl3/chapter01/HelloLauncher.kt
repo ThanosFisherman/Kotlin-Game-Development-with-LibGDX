@@ -1,12 +1,15 @@
 package com.libgdx.example.lwjgl3.chapter01
 
-import chapter01.HelloWorldImage
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration
 
-object HelloLauncher {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        Lwjgl3Application(HelloWorldImage())
-    }
+fun main() {
+
+    val config =
+        Lwjgl3ApplicationConfiguration().apply {
+            setWindowedMode(800, 600)
+            setTitle("Starfish Collector")
+        }
+
+    Lwjgl3Application(HelloWorldImage(), config)
 }
-

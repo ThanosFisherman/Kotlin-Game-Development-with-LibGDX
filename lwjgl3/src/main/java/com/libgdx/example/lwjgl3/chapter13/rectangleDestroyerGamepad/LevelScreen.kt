@@ -5,7 +5,6 @@ import com.badlogic.gdx.audio.Music
 import com.badlogic.gdx.audio.Sound
 import com.badlogic.gdx.controllers.Controller
 import com.badlogic.gdx.controllers.Controllers
-import com.badlogic.gdx.controllers.PovDirection
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.math.MathUtils
 import com.badlogic.gdx.scenes.scene2d.ui.Label

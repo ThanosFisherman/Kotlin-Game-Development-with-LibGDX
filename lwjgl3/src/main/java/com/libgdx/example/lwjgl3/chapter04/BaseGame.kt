@@ -3,6 +3,7 @@ package chapter04
 import com.badlogic.gdx.Game
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.InputMultiplexer
+import com.libgdx.example.lwjgl3.chapter04.BaseScreen
 
 /**
  * Created when program is launched;

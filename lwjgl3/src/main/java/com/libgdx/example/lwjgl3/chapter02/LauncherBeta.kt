@@ -1,15 +1,21 @@
-package chapter02
+package com.libgdx.example.lwjgl3.chapter02
 
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication
+import chapter02.StarfishCollectorBeta
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration
 
 object LauncherBeta {
+
+
     @JvmStatic
     fun main(args: Array<String>) {
-        LwjglApplication(
-            StarfishCollectorBeta(),
-            "Starfish Collector",
-            800,
-            600
-        )
+
+        val config =
+            Lwjgl3ApplicationConfiguration().apply {
+                setWindowedMode(800, 600)
+                setTitle("Starfish Collector")
+            }
+
+        Lwjgl3Application(StarfishCollectorBeta(), config)
     }
 }

@@ -1,4 +1,4 @@
-package chapter01
+package com.libgdx.example.lwjgl3.chapter01
 
 import com.badlogic.gdx.Game
 import com.badlogic.gdx.Gdx
@@ -13,7 +13,7 @@ class HelloWorldImage : Game() {
     private lateinit var batch: SpriteBatch
 
     override fun create() {
-        val worldFile:FileHandle = Gdx.files.internal("world.png")
+        val worldFile:FileHandle = Gdx.files.internal("chapter01/world.png")
         texture = Texture(worldFile)
         batch = SpriteBatch()
     }

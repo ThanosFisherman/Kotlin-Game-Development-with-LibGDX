@@ -1,14 +1,15 @@
-package chapter05.starfishCollector
+package com.libgdx.example.lwjgl3.chapter05.starfishCollector
 
+import chapter05.starfishCollector.BaseScreen
 import com.badlogic.gdx.Game
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.InputMultiplexer
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.Texture
 import com.badlogic.gdx.graphics.g2d.NinePatch
-import com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator
-import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator.FreeTypeFontParameter
+import com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle
+
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton.TextButtonStyle
 import com.badlogic.gdx.scenes.scene2d.utils.NinePatchDrawable
 
@@ -48,7 +49,7 @@ abstract class BaseGame : Game() {
         Gdx.input.inputProcessor = im
 
         val fontGenerator = FreeTypeFontGenerator(Gdx.files.internal("assets/OpenSans.ttf"))
-        val fontParameters = FreeTypeFontParameter()
+        val fontParameters = FreeTypeFontGenerator.FreeTypeFontParameter()
         fontParameters.size = 48
         fontParameters.color = Color.WHITE
         fontParameters.borderWidth = 2f

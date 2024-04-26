@@ -4,6 +4,7 @@ import com.badlogic.gdx.Input.Keys
 import com.badlogic.gdx.math.MathUtils
 import com.badlogic.gdx.scenes.scene2d.Actor
 import com.badlogic.gdx.scenes.scene2d.actions.Actions
+import com.libgdx.example.lwjgl3.chapter04.BaseScreen
 
 class LevelScreen : BaseScreen() {
 

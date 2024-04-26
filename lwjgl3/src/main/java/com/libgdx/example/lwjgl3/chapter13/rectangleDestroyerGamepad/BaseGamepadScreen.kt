@@ -3,7 +3,6 @@ package chapter13.rectangleDestroyerGamepad
 import com.badlogic.gdx.controllers.Controller
 import com.badlogic.gdx.controllers.ControllerListener
 import com.badlogic.gdx.controllers.Controllers
-import com.badlogic.gdx.controllers.PovDirection
 import com.badlogic.gdx.math.Vector3
 
 abstract class BaseGamepadScreen : BaseScreen(), ControllerListener {
@@ -28,19 +27,20 @@ abstract class BaseGamepadScreen : BaseScreen(), ControllerListener {
         return false
     }
 
-    override fun povMoved(var1: Controller, var2: Int, var3: PovDirection): Boolean {
+     fun povMoved(var1: Controller, var2: Int): Boolean {
         return false
     }
 
-    override fun xSliderMoved(var1: Controller, var2: Int, var3: Boolean): Boolean {
+
+     fun xSliderMoved(var1: Controller, var2: Int, var3: Boolean): Boolean {
         return false
     }
 
-    override fun ySliderMoved(var1: Controller, var2: Int, var3: Boolean): Boolean {
+     fun ySliderMoved(var1: Controller, var2: Int, var3: Boolean): Boolean {
         return false
     }
 
-    override fun accelerometerMoved(var1: Controller, var2: Int, var3: Vector3): Boolean {
+     fun accelerometerMoved(var1: Controller, var2: Int, var3: Vector3): Boolean {
         return false
     }
 }

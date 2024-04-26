@@ -1,14 +1,19 @@
-package chapter03
+package com.libgdx.example.lwjgl3.chapter03
 
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration
 
 object Launcher {
+
     @JvmStatic
     fun main(args: Array<String>) {
-        // To start a LibGDX program, this method:
-        // (1) creates an instance of the game
-        // (2) creates a new application with game instance and window settings as argument
-        val myGame = StarfishGame()
-        LwjglApplication(myGame, "Starfish Collector", 800, 600)
+
+        val config =
+            Lwjgl3ApplicationConfiguration().apply {
+                setWindowedMode(800, 600)
+                setTitle("Starfish Collector")
+            }
+
+        Lwjgl3Application(StarfishGame(), config)
     }
 }

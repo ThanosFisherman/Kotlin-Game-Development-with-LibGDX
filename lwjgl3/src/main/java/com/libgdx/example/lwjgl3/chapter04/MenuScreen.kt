@@ -2,6 +2,7 @@ package chapter04
 
 import com.badlogic.gdx.Input
 import com.badlogic.gdx.scenes.scene2d.actions.Actions
+import com.libgdx.example.lwjgl3.chapter04.BaseScreen
 
 class MenuScreen : BaseScreen() {
 
