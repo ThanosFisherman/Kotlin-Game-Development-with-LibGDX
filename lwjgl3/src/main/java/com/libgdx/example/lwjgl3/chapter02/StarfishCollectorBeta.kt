@@ -1,9 +1,5 @@
 package com.libgdx.example.lwjgl3.chapter02
 
-import chapter02.ActorBeta
-import chapter02.GameBeta
-import chapter02.Sharky
-import chapter02.Turtle
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.Texture
 

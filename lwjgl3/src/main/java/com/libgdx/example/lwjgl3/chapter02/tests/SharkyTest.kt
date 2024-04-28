@@ -1,6 +1,6 @@
 //package com.libgdx.example.lwjgl3.chapter02.tests
 //
-//import chapter02.Sharky
+//import com.libgdx.example.lwjgl3.chapter02.Sharky
 //import org.junit.jupiter.api.Test
 //import org.junit.jupiter.api.Assertions.*
 //

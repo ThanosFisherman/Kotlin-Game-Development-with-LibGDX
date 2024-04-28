@@ -1,7 +1,8 @@
-package chapter02
+package com.libgdx.example.lwjgl3.chapter02
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.Input
+import com.libgdx.example.lwjgl3.chapter02.ActorBeta
 
 class Turtle : ActorBeta() {
 

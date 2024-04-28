@@ -1,4 +1,4 @@
-package chapter02
+package com.libgdx.example.lwjgl3.chapter02
 
 import kotlin.random.Random.Default.nextBoolean
 
