@@ -58,8 +58,11 @@ dependencies {
   implementation "com.badlogicgames.gdx-controllers:gdx-controllers-core:$gdxControllersVersion"
   implementation "com.badlogicgames.gdx-controllers:gdx-controllers-desktop:$gdxControllersVersion"
   implementation 'org.openjfx:javafx-swing:22.0.1'
+  testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+}
 
-
+test {
+  useJUnitPlatform()
 }
 
 def jarName = "${appName}-${version}.jar"
