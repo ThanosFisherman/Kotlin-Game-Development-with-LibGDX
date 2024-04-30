@@ -1,9 +1,7 @@
-package chapter03
+package com.libgdx.example.lwjgl3.chapter03
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.Input.Keys
-import com.libgdx.example.lwjgl3.chapter03.BaseActor
-import com.libgdx.example.lwjgl3.chapter03.LevelScreen
 
 class MenuScreen: BaseScreen() {
     override fun initialize() {

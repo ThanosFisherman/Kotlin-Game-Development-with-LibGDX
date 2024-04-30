@@ -1,8 +1,6 @@
-package chapter03
+package com.libgdx.example.lwjgl3.chapter03
 
 import com.badlogic.gdx.scenes.scene2d.actions.Actions
-import com.libgdx.example.lwjgl3.chapter03.BaseActor
-import com.libgdx.example.lwjgl3.chapter03.Rock
 
 class StarfishCollector: GameBeta() {
 

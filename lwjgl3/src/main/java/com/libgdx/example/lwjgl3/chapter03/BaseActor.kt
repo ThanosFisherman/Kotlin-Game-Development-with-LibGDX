@@ -15,16 +15,16 @@ import com.badlogic.gdx.math.Intersector.MinimumTranslationVector
 import com.badlogic.gdx.math.Rectangle
 
 /**
-*   Extend functionality of the LibGDX Actor class.
-*/
+ *   Extend functionality of the LibGDX Actor class.
+ */
 open class BaseActor(x: Float, y: Float, s: Stage) : Actor() {
 
-    private var animation: Animation<TextureRegion>?
+    private var animation: Animation<TextureRegion>? = null
     private var elapsedTime: Float = 0F
     private var animationPaused: Boolean = false
 
-    private var velocityVec: Vector2 = Vector2(0f, 0f)
-    private var accelerationVec: Vector2 = Vector2(0f, 0f)
+    private val velocityVec: Vector2 = Vector2(0f, 0f)
+    private val accelerationVec: Vector2 = Vector2(0f, 0f)
     private var acceleration: Float = 0f
     private var maxSpeed: Float = 1000f
     private var deceleration: Float = 0f
@@ -35,7 +35,6 @@ open class BaseActor(x: Float, y: Float, s: Stage) : Actor() {
         this.x = x
         this.y = y
         s.addActor(this)
-        animation = null
     }
 
     override fun act(dt: Float) {
@@ -75,7 +74,7 @@ open class BaseActor(x: Float, y: Float, s: Stage) : Actor() {
         val w: Float = tr.regionWidth.toFloat()
         val h: Float = tr.regionHeight.toFloat()
         setSize(w, h)
-        setOrigin(w/2, h/2)
+        setOrigin(w / 2, h / 2)
 
         if (boundaryPolygon == null)
             setBoundaryRectangle()
@@ -85,10 +84,15 @@ open class BaseActor(x: Float, y: Float, s: Stage) : Actor() {
         animationPaused = pause
     }
 
-    fun loadAnimationFromFiles(fileNames: Array<String>, frameDuration: Float, loop: Boolean, textureFilter: TextureFilter = TextureFilter.Linear): Animation<TextureRegion> {
+    fun loadAnimationFromFiles(
+        fileNames: Array<String>,
+        frameDuration: Float,
+        loop: Boolean,
+        textureFilter: TextureFilter = TextureFilter.Linear
+    ): Animation<TextureRegion> {
         val textureArray: Array<TextureRegion> = Array()
 
-        for (i in 0..fileNames.size-1) {
+        for (i in 0..fileNames.size - 1) {
             val texture = Texture(Gdx.files.internal(fileNames[i]))
             texture.setFilter(textureFilter, textureFilter)
             textureArray.add(TextureRegion(texture))
@@ -107,7 +111,14 @@ open class BaseActor(x: Float, y: Float, s: Stage) : Actor() {
         return anim
     }
 
-    fun loadAnimationFromSheet(fileName: String, rows: Int, cols: Int, frameDuration: Float, loop: Boolean, textureFilter: TextureFilter = TextureFilter.Linear): Animation<TextureRegion> {
+    fun loadAnimationFromSheet(
+        fileName: String,
+        rows: Int,
+        cols: Int,
+        frameDuration: Float,
+        loop: Boolean,
+        textureFilter: TextureFilter = TextureFilter.Linear
+    ): Animation<TextureRegion> {
         val texture = Texture(Gdx.files.internal(fileName), true)
         texture.setFilter(textureFilter, textureFilter)
         val frameWidth: Int = texture.width / cols
@@ -155,15 +166,23 @@ open class BaseActor(x: Float, y: Float, s: Stage) : Actor() {
     }
 
     fun getSpeed() = velocityVec.len()
-    fun setMotionAngle(angle: Float) = velocityVec.setAngle(angle)
+    fun setMotionAngle(angle: Float): Vector2 = velocityVec.setAngle(angle)
     fun getMotionAngle() = velocityVec.angleDeg()
     fun isMoving() = getSpeed() > 0
 
-    fun setAcceleration(acc: Float) { acceleration = acc }
-    fun accelerateAtAngle(angle: Float) = accelerationVec.add( Vector2(acceleration, 0f).setAngleDeg(angle))
-    fun accelerateForward() = accelerateAtAngle(getRotation())
-    fun setMaxSpeed(ms: Float) { maxSpeed = ms }
-    fun setDeceleration(dec: Float) { deceleration = dec }
+    fun setAcceleration(acc: Float) {
+        acceleration = acc
+    }
+
+    fun accelerateAtAngle(angle: Float): Vector2 = accelerationVec.add(Vector2(acceleration, 0f).setAngleDeg(angle))
+    fun accelerateForward(): Vector2 = accelerateAtAngle(rotation)
+    fun setMaxSpeed(ms: Float) {
+        maxSpeed = ms
+    }
+
+    fun setDeceleration(dec: Float) {
+        deceleration = dec
+    }
 
     fun applyPhysics(dt: Float) {
         // apply acceleration
@@ -173,7 +192,7 @@ open class BaseActor(x: Float, y: Float, s: Stage) : Actor() {
 
         // decrease speed (decelerate) when not accelerating
         if (accelerationVec.len() == 0f)
-            speed-= deceleration * dt
+            speed -= deceleration * dt
 
         // keep speed within set bounds
         speed = MathUtils.clamp(speed, 0f, maxSpeed)
@@ -182,7 +201,7 @@ open class BaseActor(x: Float, y: Float, s: Stage) : Actor() {
         setSpeed(speed)
 
         // apply velocity
-        moveBy(velocityVec.x* dt, velocityVec.y * dt)
+        moveBy(velocityVec.x * dt, velocityVec.y * dt)
 
         // reset acceleration
         accelerationVec.set(0f, 0f)
@@ -200,20 +219,20 @@ open class BaseActor(x: Float, y: Float, s: Stage) : Actor() {
         val w: Float = width
         val h: Float = height
 
-        val vertices = FloatArray(2*numSides)
+        val vertices = FloatArray(2 * numSides)
         for (i in 0 until numSides) {
             val angle: Float = i * MathUtils.PI2 / numSides
-            vertices[2*i] = w/2 * MathUtils.cos(angle) + w/2    // x-coordinates
-            vertices[2*i+1] = h/2 * MathUtils.sin(angle) + h/2  // y-coordinates
+            vertices[2 * i] = w / 2 * MathUtils.cos(angle) + w / 2    // x-coordinates
+            vertices[2 * i + 1] = h / 2 * MathUtils.sin(angle) + h / 2  // y-coordinates
         }
         boundaryPolygon = Polygon(vertices)
     }
 
     fun getBoundaryPolygon(): Polygon {
-        boundaryPolygon!!.setPosition(x, y)
-        boundaryPolygon!!.setOrigin(originX, originY)
-        boundaryPolygon!!.rotation = rotation
-        boundaryPolygon!!.setScale(scaleX, scaleY)
+        boundaryPolygon?.setPosition(x, y)
+        boundaryPolygon?.setOrigin(originX, originY)
+        boundaryPolygon?.rotation = rotation
+        boundaryPolygon?.setScale(scaleX, scaleY)
         return boundaryPolygon as Polygon
     }
 
@@ -232,13 +251,13 @@ open class BaseActor(x: Float, y: Float, s: Stage) : Actor() {
         val poly2: Polygon = other.getBoundaryPolygon()
 
         // initial test to improve performance
-        if(!poly1.boundingRectangle.overlaps(poly2.boundingRectangle))
+        if (!poly1.boundingRectangle.overlaps(poly2.boundingRectangle))
             return null
 
         val mtv = MinimumTranslationVector()
         val polygonOverlap = Intersector.overlapConvexPolygons(poly1, poly2, mtv)
 
-        if(!polygonOverlap)
+        if (!polygonOverlap)
             return null
 
         this.moveBy(mtv.normal.x * mtv.depth, mtv.normal.y * mtv.depth)
@@ -247,16 +266,18 @@ open class BaseActor(x: Float, y: Float, s: Stage) : Actor() {
     }
 
     // miscellaneous ------------------------------------------------------------------------------------------
-    fun centerAtPosition(x: Float, y: Float) = setPosition(x - width/2, y - height/2)
-    fun centerAtActor(other: BaseActor) = centerAtPosition(other.x + other.width/2, other.y + other.height/2)
-    fun setOpacity(opacity: Float) { this.color.a = opacity }
+    fun centerAtPosition(x: Float, y: Float) = setPosition(x - width / 2, y - height / 2)
+    fun centerAtActor(other: BaseActor) = centerAtPosition(other.x + other.width / 2, other.y + other.height / 2)
+    fun setOpacity(opacity: Float) {
+        this.color.a = opacity
+    }
 
     fun boundToWorld() {
         // check left edge
         if (x < 0)
             x = 0f
         // check right edge
-        if (x +width > worldBounds.width)
+        if (x + width > worldBounds.width)
             x = worldBounds.width - width
         // check bottom edge
         if (y < 0)
@@ -290,7 +311,10 @@ open class BaseActor(x: Float, y: Float, s: Stage) : Actor() {
     companion object {
         private lateinit var worldBounds: Rectangle
 
-        fun setWorldBounds(width: Float, height: Float) { worldBounds = Rectangle(0f, 0f, width, height) }
+        fun setWorldBounds(width: Float, height: Float) {
+            worldBounds = Rectangle(0f, 0f, width, height)
+        }
+
         fun setWorldBounds(ba: BaseActor) = setWorldBounds(ba.width, ba.height)
 
         fun getList(stage: Stage, className: String): ArrayList<BaseActor> {
@@ -303,8 +327,8 @@ open class BaseActor(x: Float, y: Float, s: Stage) : Actor() {
                 error.printStackTrace()
             }
 
-            for(actor in stage.actors) {
-                if(theClass!!.isInstance(actor)) {
+            for (actor in stage.actors) {
+                if (theClass!!.isInstance(actor)) {
                     list.add(actor as BaseActor)
                 }
             }

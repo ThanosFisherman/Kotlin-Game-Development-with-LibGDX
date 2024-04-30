@@ -1,4 +1,4 @@
-package chapter03
+package com.libgdx.example.lwjgl3.chapter03
 
 import com.badlogic.gdx.Game
 import com.badlogic.gdx.Gdx
