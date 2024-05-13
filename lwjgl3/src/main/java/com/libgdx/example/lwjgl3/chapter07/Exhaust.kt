@@ -11,9 +11,9 @@ class Exhaust(x: Float, y: Float, s: Stage): BaseActor(x, y, s) {
 
     init {
         when(MathUtils.random(0, 2)) {
-            0 -> exhaust = loadTexture("assets/exhaust0.png")
-            1 -> exhaust = loadTexture("assets/exhaust1.png")
-            2 -> exhaust = loadTexture("assets/exhaust2.png")
+            0 -> exhaust = loadTexture("chapter07/exhaust0.png")
+            1 -> exhaust = loadTexture("chapter07/exhaust1.png")
+            2 -> exhaust = loadTexture("chapter07/exhaust2.png")
             else -> println("Exhaust.kt: Error! random number returned out of range")
         }
 

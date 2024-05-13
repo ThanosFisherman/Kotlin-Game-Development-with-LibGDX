@@ -23,19 +23,19 @@ class Message(x: Float, y: Float, s: Stage): BaseActor(x, y, s)  {
     private var tone: Sound
 
     init {
-        perfect = loadTexture("assets/perfect.png")
-        great = loadTexture("assets/great.png")
-        good = loadTexture("assets/good.png")
-        almost = loadTexture("assets/almost.png")
-        miss = loadTexture("assets/miss.png")
+        perfect = loadTexture("chapter06/rhythmTapper/perfect.png")
+        great = loadTexture("chapter06/rhythmTapper/great.png")
+        good = loadTexture("chapter06/rhythmTapper/good.png")
+        almost = loadTexture("chapter06/rhythmTapper/almost.png")
+        miss = loadTexture("chapter06/rhythmTapper/miss.png")
 
-        countDown3 = loadTexture("assets/countdown-3.png")
-        countDown2 = loadTexture("assets/countdown-2.png")
-        countDown1 = loadTexture("assets/countdown-1.png")
-        countdownGo = loadTexture("assets/countdown-go.png")
-        congratulations = loadTexture("assets/congratulations.png")
-        blip = Gdx.audio.newSound(Gdx.files.internal("assets/blip.wav"))
-        tone = Gdx.audio.newSound(Gdx.files.internal("assets/tone.wav"))
+        countDown3 = loadTexture("chapter06/rhythmTapper/countdown-3.png")
+        countDown2 = loadTexture("chapter06/rhythmTapper/countdown-2.png")
+        countDown1 = loadTexture("chapter06/rhythmTapper/countdown-1.png")
+        countdownGo = loadTexture("chapter06/rhythmTapper/countdown-go.png")
+        congratulations = loadTexture("chapter06/rhythmTapper/congratulations.png")
+        blip = Gdx.audio.newSound(Gdx.files.internal("chapter06/rhythmTapper/blip.wav"))
+        tone = Gdx.audio.newSound(Gdx.files.internal("chapter06/rhythmTapper/tone.wav"))
     }
 
     fun pulseFade() {

@@ -36,7 +36,7 @@ class LevelScreen : BaseScreen() {
     override fun initialize() {
         // background
         val background = BaseActor(0f, 0f, mainStage)
-        background.loadTexture("assets/space.png")
+        background.loadTexture("chapter08/space.png")
         BaseActor.setWorldBounds(background)
 
         // paddle
@@ -87,16 +87,16 @@ class LevelScreen : BaseScreen() {
         uiTable.row()
         uiTable.add(messageLabel).colspan(3).expandY()
 
-        bounceSound = Gdx.audio.newSound((Gdx.files.internal(("assets/boing.wav"))))
-        brickBumpSound = Gdx.audio.newSound((Gdx.files.internal(("assets/bump.wav"))))
-        wallBumpSound = Gdx.audio.newSound((Gdx.files.internal(("assets/bump-low.wav"))))
-        itemAppearSound = Gdx.audio.newSound((Gdx.files.internal(("assets/swoosh.wav"))))
-        itemCollectSound = Gdx.audio.newSound((Gdx.files.internal(("assets/pop.wav"))))
-        gameOverSound = Gdx.audio.newSound((Gdx.files.internal(("assets/382310__myfox14__game-over-arcade.wav"))))
-        gameWin = Gdx.audio.newSound((Gdx.files.internal(("assets/391539__mativve__electro-win-sound.wav"))))
-        ballLost = Gdx.audio.newSound((Gdx.files.internal(("assets/159408__noirenex__life-lost-game-over.wav"))))
+        bounceSound = Gdx.audio.newSound((Gdx.files.internal(("chapter08/boing.wav"))))
+        brickBumpSound = Gdx.audio.newSound((Gdx.files.internal(("chapter08/bump.wav"))))
+        wallBumpSound = Gdx.audio.newSound((Gdx.files.internal(("chapter08/bump-low.wav"))))
+        itemAppearSound = Gdx.audio.newSound((Gdx.files.internal(("chapter08/swoosh.wav"))))
+        itemCollectSound = Gdx.audio.newSound((Gdx.files.internal(("chapter08/pop.wav"))))
+        gameOverSound = Gdx.audio.newSound((Gdx.files.internal(("chapter08/382310__myfox14__game-over-arcade.wav"))))
+        gameWin = Gdx.audio.newSound((Gdx.files.internal(("chapter08/391539__mativve__electro-win-sound.wav"))))
+        ballLost = Gdx.audio.newSound((Gdx.files.internal(("chapter08/159408__noirenex__life-lost-game-over.wav"))))
 
-        backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal(("assets/Rollin-at-5.mp3")))
+        backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal(("chapter08/Rollin-at-5.mp3")))
         backgroundMusic.isLooping = true
         backgroundMusic.volume = .5f
         backgroundMusic.play()

@@ -40,14 +40,14 @@ class LevelScreen : BaseScreen() {
         Ground(800f, 0f, mainStage)
         */
 
-        Parallax(800f, 0f, mainStage, "assets/clouds0.png", 10f)
-        Parallax(0f, 0f, mainStage, "assets/clouds0.png", 10f)
-        Parallax(800f, 0f, mainStage, "assets/clouds1.png", 25f)
-        Parallax(0f, 0f, mainStage, "assets/clouds1.png", 25f)
-        Parallax(800f, 0f, mainStage, "assets/mountains0.png", 35f)
-        Parallax(0f, 0f, mainStage, "assets/mountains0.png", 35f)
-        Parallax(800f, 0f, mainStage, "assets/mountains1.png", 45f)
-        Parallax(0f, 0f, mainStage, "assets/mountains1.png", 45f)
+        Parallax(800f, 0f, mainStage, "chapter07/clouds0.png", 10f)
+        Parallax(0f, 0f, mainStage, "chapter07/clouds0.png", 10f)
+        Parallax(800f, 0f, mainStage, "chapter07/clouds1.png", 25f)
+        Parallax(0f, 0f, mainStage, "chapter07/clouds1.png", 25f)
+        Parallax(800f, 0f, mainStage, "chapter07/mountains0.png", 35f)
+        Parallax(0f, 0f, mainStage, "chapter07/mountains0.png", 35f)
+        Parallax(800f, 0f, mainStage, "chapter07/mountains1.png", 45f)
+        Parallax(0f, 0f, mainStage, "chapter07/mountains1.png", 45f)
         Ground(0f, 0f, mainStage)
         Ground(800f, 0f, mainStage)
 
@@ -57,7 +57,7 @@ class LevelScreen : BaseScreen() {
         scoreLabel = Label("$score", BaseGame.labelStyle)
 
         gameOverMessage = BaseActor(0f, 0f, mainStage)
-        gameOverMessage.loadTexture("assets/game-over.png")
+        gameOverMessage.loadTexture("chapter07/game-over.png")
         gameOverMessage.isVisible = false
 
         restartButton = TextButton("Restart", BaseGame.textButtonStyle)
@@ -79,10 +79,10 @@ class LevelScreen : BaseScreen() {
         uiTable.row()
         uiTable.add(messageTable).expandY()
 
-        sparkleSound = Gdx.audio.newSound(Gdx.files.internal("assets/sparkle.mp3"))
-        explosionSound = Gdx.audio.newSound(Gdx.files.internal("assets/explosion.wav"))
+        sparkleSound = Gdx.audio.newSound(Gdx.files.internal("chapter07/sparkle.mp3"))
+        explosionSound = Gdx.audio.newSound(Gdx.files.internal("chapter07/explosion.wav"))
 
-        backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal("assets/Prelude-and-Action.mp3"))
+        backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal("chapter07/Prelude-and-Action.mp3"))
         backgroundMusic.isLooping = true
         backgroundMusic.volume = 1f
         backgroundMusic.play()

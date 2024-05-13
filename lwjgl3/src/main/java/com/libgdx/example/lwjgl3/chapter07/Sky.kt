@@ -4,7 +4,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage
 
 class Sky(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     init {
-        loadTexture("assets/sky.png")
+        loadTexture("chapter07/sky.png")
         setSpeed(25f)
         setMotionAngle(180f)
     }

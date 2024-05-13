@@ -17,16 +17,16 @@ class Plane(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
 
     init {
         val fileNames: Array<String> = Array()
-        fileNames.add("assets/planeGreen0.png")
-        fileNames.add("assets/planeGreen1.png")
-        fileNames.add("assets/planeGreen2.png")
-        fileNames.add("assets/planeGreen1.png")
+        fileNames.add("chapter07/planeGreen0.png")
+        fileNames.add("chapter07/planeGreen1.png")
+        fileNames.add("chapter07/planeGreen2.png")
+        fileNames.add("chapter07/planeGreen1.png")
         loadAnimationFromFiles(fileNames, .1f, true)
 
         setMaxSpeed(800f)
         setBoundaryPolygon(8)
 
-        explosionSound = Gdx.audio.newSound(Gdx.files.internal("assets/explosion.wav"))
+        explosionSound = Gdx.audio.newSound(Gdx.files.internal("chapter07/explosion.wav"))
     }
 
     override fun act(dt: Float) {

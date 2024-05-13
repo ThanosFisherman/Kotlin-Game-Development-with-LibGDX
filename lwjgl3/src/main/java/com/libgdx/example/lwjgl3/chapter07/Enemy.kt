@@ -11,17 +11,17 @@ class Enemy(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
 
     init {
         val fileNames = Array<String>()
-        fileNames.add("assets/planeRed0.png")
-        fileNames.add("assets/planeRed1.png")
-        fileNames.add("assets/planeRed2.png")
-        fileNames.add("assets/planeRed1.png")
+        fileNames.add("chapter07/planeRed0.png")
+        fileNames.add("chapter07/planeRed1.png")
+        fileNames.add("chapter07/planeRed2.png")
+        fileNames.add("chapter07/planeRed1.png")
         loadAnimationFromFiles(fileNames, .1f, true)
 
         setSpeed(100f)
         setMotionAngle(MathUtils.random(170f, 190f))
         setBoundaryPolygon(8)
 
-        engineMusic = Gdx.audio.newMusic(Gdx.files.internal("assets/242739__marlonhj__engine-1.wav"))
+        engineMusic = Gdx.audio.newMusic(Gdx.files.internal("chapter07/242739__marlonhj__engine-1.wav"))
         engineMusic.volume = .25f
         engineMusic.isLooping = true
         engineMusic.play()

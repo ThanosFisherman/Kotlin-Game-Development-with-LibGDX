@@ -5,7 +5,7 @@ import com.badlogic.gdx.scenes.scene2d.actions.Actions
 
 class Stars(x: Float, y: Float, s: Stage): BaseActor(x, y, s) {
     init {
-        loadTexture("assets/star.png")
+        loadTexture("chapter07/star.png")
 
         val pulse = Actions.sequence(
             Actions.scaleTo(1.2f, 1.2f, .5f),

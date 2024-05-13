@@ -13,20 +13,20 @@ class MenuScreen : BaseScreen() {
 
     override fun initialize() {
         val space = BaseActor(0f, 0f, mainStage)
-        space.loadTexture("assets/space.png")
+        space.loadTexture("chapter06/spaceRocks/space.png")
         space.setSize(800f, 600f)
 
         val start = BaseActor(0f, 0f, mainStage)
-        start.loadTexture("assets/message-start.png")
+        start.loadTexture("chapter06/spaceRocks/message-start.png")
         start.centerAtPosition(400f, 300f)
         start.setOpacity(0f)
         start.addAction(Actions.fadeIn(1f))
 
-        music = Gdx.audio.newMusic(Gdx.files.internal("assets/fantasy-orchestra.wav"))
+        music = Gdx.audio.newMusic(Gdx.files.internal("chapter06/spaceRocks/fantasy-orchestra.wav"))
         music.isLooping = true
         music.play()
 
-        blip = Gdx.audio.newSound(Gdx.files.internal("assets/blip.wav"))
+        blip = Gdx.audio.newSound(Gdx.files.internal("chapter06/spaceRocks/blip.wav"))
     }
 
     override fun update(dt: Float) {}

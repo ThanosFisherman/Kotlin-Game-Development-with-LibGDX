@@ -4,7 +4,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage
 
 class Ground(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     init {
-        loadTexture("assets/ground.png")
+        loadTexture("chapter07/ground.png")
         setSpeed(100f)
         setMotionAngle(180f)
     }

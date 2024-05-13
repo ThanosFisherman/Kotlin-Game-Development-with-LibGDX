@@ -48,7 +48,7 @@ class RhythmScreen: BaseScreen() {
 
     override fun initialize() {
         val background = BaseActor(0f, 0f, mainStage)
-        background.loadTexture("assets/space.png")
+        background.loadTexture("chapter06/rhythmTapper/space.png")
         background.setSize(800f, 600f)
         BaseActor.setWorldBounds(background)
 
@@ -84,13 +84,13 @@ class RhythmScreen: BaseScreen() {
         val startButton = TextButton("Start", BaseGame.textButtonStyle)
         startButton.addListener { e: Event ->
             if (isTouchDownEvent(e)) {
-                /*val dataFileHandle = Gdx.files.internal("assets/FunkyJunky.key") // hard coded path*/
-                val dataFileHandle = Gdx.files.internal("assets/masterOfTheFeast.key") // hard coded path
+                /*val dataFileHandle = Gdx.files.internal("chapter06/rhythmTapper/FunkyJunky.key") // hard coded path*/
+                val dataFileHandle = Gdx.files.internal("chapter06/rhythmTapper/masterOfTheFeast.key") // hard coded path
                 songData = SongData()
                 songData!!.readFromFile(dataFileHandle)
                 songData!!.resetIndex()
 
-                val songFileHandle = Gdx.files.internal("assets/" + songData!!.songName)
+                val songFileHandle = Gdx.files.internal("chapter06/rhythmTapper/" + songData!!.songName)
                 gameMusic = Gdx.audio.newMusic(songFileHandle)
                 startButton.isVisible = false
 
@@ -140,7 +140,7 @@ class RhythmScreen: BaseScreen() {
         uiTable.row()
         uiTable.add(scorePercentLabel).colspan(3).expandX().fillY()
 
-        applause = Gdx.audio.newSound(Gdx.files.internal("assets/applause7.wav"))
+        applause = Gdx.audio.newSound(Gdx.files.internal("chapter06/rhythmTapper/applause7.wav"))
     }
 
     override fun update(dt: Float) {

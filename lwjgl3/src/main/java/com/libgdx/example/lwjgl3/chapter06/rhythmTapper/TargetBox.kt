@@ -8,7 +8,7 @@ import com.badlogic.gdx.utils.Align
 
 class TargetBox(x: Float, y: Float, s: Stage, letter: String, color: Color): BaseActor(x, y, s) {
     init {
-        loadTexture("assets/box.png")
+        loadTexture("chapter06/rhythmTapper/box.png")
         setSize(64f, 64f)
 
         // add a centered label containing letter with given color

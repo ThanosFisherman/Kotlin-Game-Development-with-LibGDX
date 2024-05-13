@@ -6,7 +6,7 @@ import com.badlogic.gdx.scenes.scene2d.actions.Actions
 
 class FallingBox(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     init {
-        loadTexture("assets/box.png")
+        loadTexture("chapter06/rhythmTapper/box.png")
         setScale(.75f, .75f)
     }
 

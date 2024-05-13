@@ -7,7 +7,7 @@ import com.badlogic.gdx.scenes.scene2d.actions.Actions
 class Rock(x: Float, y: Float, s: Stage, scale: Float, speed: Float) : BaseActor(x, y, s) {
 
     init {
-        loadTexture("assets/rock.png")
+        loadTexture("chapter06/spaceRocks/rock.png")
         setScale(scale)
 
         var random = MathUtils.random(speed)

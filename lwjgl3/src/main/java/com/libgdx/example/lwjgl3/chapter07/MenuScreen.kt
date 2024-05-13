@@ -24,7 +24,7 @@ class MenuScreen: BaseScreen() {
 
     override fun initialize() {
         overlay = BaseActor(0f, 0f, uiStage)
-        overlay.loadTexture("assets/overlay.png")
+        overlay.loadTexture("chapter07/overlay.png")
         overlay.width = 800f
         overlay.height = 600f
 
@@ -34,14 +34,14 @@ class MenuScreen: BaseScreen() {
         ground0 = Ground(0f, 0f, mainStage)
         ground1 = Ground(800f, 0f, mainStage)
         */
-        Parallax(800f, 0f, mainStage, "assets/clouds0.png", 10f)
-        Parallax(0f, 0f, mainStage, "assets/clouds0.png", 10f)
-        Parallax(800f, 0f, mainStage, "assets/clouds1.png", 25f)
-        Parallax(0f, 0f, mainStage, "assets/clouds1.png", 25f)
-        Parallax(800f, 0f, mainStage, "assets/mountains0.png", 35f)
-        Parallax(0f, 0f, mainStage, "assets/mountains0.png", 35f)
-        Parallax(800f, 0f, mainStage, "assets/mountains1.png", 45f)
-        Parallax(0f, 0f, mainStage, "assets/mountains1.png", 45f)
+        Parallax(800f, 0f, mainStage, "chapter07/clouds0.png", 10f)
+        Parallax(0f, 0f, mainStage, "chapter07/clouds0.png", 10f)
+        Parallax(800f, 0f, mainStage, "chapter07/clouds1.png", 25f)
+        Parallax(0f, 0f, mainStage, "chapter07/clouds1.png", 25f)
+        Parallax(800f, 0f, mainStage, "chapter07/mountains0.png", 35f)
+        Parallax(0f, 0f, mainStage, "chapter07/mountains0.png", 35f)
+        Parallax(800f, 0f, mainStage, "chapter07/mountains1.png", 45f)
+        Parallax(0f, 0f, mainStage, "chapter07/mountains1.png", 45f)
         Ground(0f, 0f, mainStage)
         Ground(800f, 0f, mainStage)
 

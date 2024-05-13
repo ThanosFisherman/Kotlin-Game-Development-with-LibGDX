@@ -5,7 +5,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage
 class Sparkle(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     init {
         loadAnimationFromSheet(
-            "assets/sparkle.png",
+            "chapter07/sparkle.png",
             8,
             8,
             .02f,
