@@ -1,18 +1,17 @@
 package com.libgdx.example.lwjgl3.chapter03
 
-import com.badlogic.gdx.graphics.Color
-import com.badlogic.gdx.graphics.g2d.Animation
-import com.badlogic.gdx.graphics.g2d.TextureRegion
-import com.badlogic.gdx.scenes.scene2d.Actor
-import com.badlogic.gdx.scenes.scene2d.Stage
-import com.badlogic.gdx.graphics.g2d.Batch
 import com.badlogic.gdx.Gdx
+import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.Texture
 import com.badlogic.gdx.graphics.Texture.TextureFilter
+import com.badlogic.gdx.graphics.g2d.Animation
+import com.badlogic.gdx.graphics.g2d.Batch
+import com.badlogic.gdx.graphics.g2d.TextureRegion
 import com.badlogic.gdx.math.*
-import com.badlogic.gdx.utils.Array
 import com.badlogic.gdx.math.Intersector.MinimumTranslationVector
-import com.badlogic.gdx.math.Rectangle
+import com.badlogic.gdx.scenes.scene2d.Actor
+import com.badlogic.gdx.scenes.scene2d.Stage
+import com.badlogic.gdx.utils.Array
 
 /**
  *   Extend functionality of the LibGDX Actor class.
@@ -53,7 +52,7 @@ open class BaseActor(x: Float, y: Float, s: Stage) : Actor() {
 
         if (animation != null && isVisible) {
             batch.draw(
-                animation!!.getKeyFrame(elapsedTime),
+                animation?.getKeyFrame(elapsedTime),
                 x,
                 y,
                 originX,
