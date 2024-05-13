@@ -1,6 +1,6 @@
-package chapter05.starfishCollector
+package com.libgdx.example.lwjgl3.chapter05.starfishCollector
 
-import com.libgdx.example.lwjgl3.chapter05.starfishCollector.BaseGame
+import chapter05.starfishCollector.MenuScreen
 
 class StarfishGame: BaseGame() {
     override fun create() {

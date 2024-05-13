@@ -1,6 +1,5 @@
 package com.libgdx.example.lwjgl3.chapter05.starfishCollector
 
-import chapter05.starfishCollector.StarfishGame
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration
 
