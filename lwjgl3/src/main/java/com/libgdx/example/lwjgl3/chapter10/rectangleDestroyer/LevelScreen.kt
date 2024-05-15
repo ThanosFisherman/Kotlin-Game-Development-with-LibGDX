@@ -34,7 +34,7 @@ class LevelScreen : BaseScreen() {
     private var paddleTimer = 0f
 
     override fun initialize() {
-        val tma = TilemapActor("assets/map.tmx", mainStage)
+        val tma = TilemapActor("chapter10/rectangleDestroyer/map.tmx", mainStage)
 
         for (obj in tma.getTileList("wall")) {
             val props = obj.properties
@@ -74,7 +74,7 @@ class LevelScreen : BaseScreen() {
         /*
         // background
         val background = BaseActor(0f, 0f, mainStage)
-        background.loadTexture("assets/space.png")
+        background.loadTexture("chapter10/rectangleDestroyer/space.png")
         BaseActor.setWorldBounds(background)
 
         // paddle
@@ -130,16 +130,16 @@ class LevelScreen : BaseScreen() {
         uiTable.row()
         uiTable.add(messageLabel).colspan(3).expandY()
 
-        bounceSound = Gdx.audio.newSound((Gdx.files.internal(("assets/boing.wav"))))
-        brickBumpSound = Gdx.audio.newSound((Gdx.files.internal(("assets/bump.wav"))))
-        wallBumpSound = Gdx.audio.newSound((Gdx.files.internal(("assets/bump-low.wav"))))
-        itemAppearSound = Gdx.audio.newSound((Gdx.files.internal(("assets/swoosh.wav"))))
-        itemCollectSound = Gdx.audio.newSound((Gdx.files.internal(("assets/pop.wav"))))
-        gameOverSound = Gdx.audio.newSound((Gdx.files.internal(("assets/382310__myfox14__game-over-arcade.wav"))))
-        gameWin = Gdx.audio.newSound((Gdx.files.internal(("assets/391539__mativve__electro-win-sound.wav"))))
-        ballLost = Gdx.audio.newSound((Gdx.files.internal(("assets/159408__noirenex__life-lost-game-over.wav"))))
+        bounceSound = Gdx.audio.newSound((Gdx.files.internal(("chapter10/rectangleDestroyer/boing.wav"))))
+        brickBumpSound = Gdx.audio.newSound((Gdx.files.internal(("chapter10/rectangleDestroyer/bump.wav"))))
+        wallBumpSound = Gdx.audio.newSound((Gdx.files.internal(("chapter10/rectangleDestroyer/bump-low.wav"))))
+        itemAppearSound = Gdx.audio.newSound((Gdx.files.internal(("chapter10/rectangleDestroyer/swoosh.wav"))))
+        itemCollectSound = Gdx.audio.newSound((Gdx.files.internal(("chapter10/rectangleDestroyer/pop.wav"))))
+        gameOverSound = Gdx.audio.newSound((Gdx.files.internal(("chapter10/rectangleDestroyer/382310__myfox14__game-over-arcade.wav"))))
+        gameWin = Gdx.audio.newSound((Gdx.files.internal(("chapter10/rectangleDestroyer/391539__mativve__electro-win-sound.wav"))))
+        ballLost = Gdx.audio.newSound((Gdx.files.internal(("chapter10/rectangleDestroyer/159408__noirenex__life-lost-game-over.wav"))))
 
-        backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal(("assets/Rollin-at-5.mp3")))
+        backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal(("chapter10/rectangleDestroyer/Rollin-at-5.mp3")))
         backgroundMusic.isLooping = true
         backgroundMusic.volume = .5f
         backgroundMusic.play()

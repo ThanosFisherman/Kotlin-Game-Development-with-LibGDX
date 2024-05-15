@@ -4,13 +4,14 @@ import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.scenes.scene2d.Stage
 import com.badlogic.gdx.scenes.scene2d.ui.Label
 import com.badlogic.gdx.utils.Align
+import com.libgdx.example.lwjgl3.chapter12.BaseActor
 
 class DialogBox(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     private var dialogLabel: Label
     private val padding = 16f
 
     init {
-        loadTexture("assets/dialog-translucent.png")
+        loadTexture("chapter12/dialog-translucent.png")
         dialogLabel = Label(" ", BaseGame.labelStyle)
         dialogLabel.setWrap(true)
         dialogLabel.setAlignment(Align.topLeft)

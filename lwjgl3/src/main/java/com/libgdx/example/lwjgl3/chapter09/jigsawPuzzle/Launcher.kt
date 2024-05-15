@@ -1,5 +1,6 @@
-package com.libgdx.example.lwjgl3.chapter09.cardPickup52
+package com.libgdx.example.lwjgl3.chapter09.jigsawPuzzle
 
+import chapter09.jigsawPuzzle.JigsawPuzzleGame
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration
 
@@ -15,6 +16,6 @@ object Launcher {
                 setTitle("52 Card Pickup")
             }
 
-        Lwjgl3Application(PickupGame(), config)
+        Lwjgl3Application(JigsawPuzzleGame(), config)
     }
 }

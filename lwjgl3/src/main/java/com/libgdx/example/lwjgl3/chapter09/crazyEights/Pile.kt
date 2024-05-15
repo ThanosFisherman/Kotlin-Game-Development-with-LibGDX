@@ -8,7 +8,7 @@ class Pile(x: Float, y: Float, s: Stage): DropTargetActor(x, y, s) {
 
     init {
         cardList = ArrayList()
-        loadTexture("assets/pile.png")
+        loadTexture("chapter09/crazyEights/pile.png")
         setSize(100f, 120f)
         setBoundaryRectangle()
     }

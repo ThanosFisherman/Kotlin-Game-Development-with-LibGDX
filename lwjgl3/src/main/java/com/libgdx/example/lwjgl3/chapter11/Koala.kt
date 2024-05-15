@@ -36,25 +36,25 @@ class Koala(x: Float, y: Float, s: Stage): BaseActor(x, y, s) {
     private var hurtSound: Sound
 
     init {
-        stand = loadTexture("assets/koala/stand.png")
+        stand = loadTexture("chapter11/koala/stand.png")
 
         val walkFileNames: Array<String> = Array()
-        walkFileNames.add("assets/koala/walk-1.png")
-        walkFileNames.add("assets/koala/walk-2.png")
-        walkFileNames.add("assets/koala/walk-3.png")
-        walkFileNames.add("assets/koala/walk-2.png")
+        walkFileNames.add("chapter11/koala/walk-1.png")
+        walkFileNames.add("chapter11/koala/walk-2.png")
+        walkFileNames.add("chapter11/koala/walk-3.png")
+        walkFileNames.add("chapter11/koala/walk-2.png")
         walk = loadAnimationFromFiles(walkFileNames, .2f, true)
 
-        jump = loadTexture("assets/koala/jump.png")
+        jump = loadTexture("chapter11/koala/jump.png")
         setBoundaryPolygon(8)
 
         belowSensor = BaseActor(0f, 0f, s)
-        belowSensor.loadTexture("assets/white.png")
+        belowSensor.loadTexture("chapter11/white.png")
         belowSensor.setSize(this.width - 8f, 8f)
         belowSensor.setBoundaryRectangle()
         belowSensor.isVisible = false
 
-        hurtSound = Gdx.audio.newSound(Gdx.files.internal("assets/hurt.wav"))
+        hurtSound = Gdx.audio.newSound(Gdx.files.internal("chapter11/hurt.wav"))
     }
 
     override fun act(dt: Float) {

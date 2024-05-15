@@ -22,12 +22,12 @@ class LevelScreen : BaseScreen() {
 
     override fun initialize() {
         val background = BaseActor(0f, 0f, mainStage)
-        background.loadTexture("assets/background.jpg")
+        background.loadTexture("chapter09/jigsawPuzzle/background.jpg")
 
         val numberRows = MathUtils.random(3, 5)
         val numberCols = MathUtils.random(3, 5)
 
-        val texture = Texture(Gdx.files.internal("assets/sun.jpg"), true)
+        val texture = Texture(Gdx.files.internal("chapter09/jigsawPuzzle/sun.jpg"), true)
         val imageWidth = texture.width
         val imageHeight = texture.height
         val pieceWidth = imageWidth / numberCols
@@ -74,7 +74,7 @@ class LevelScreen : BaseScreen() {
         val buttonStyle = Button.ButtonStyle()
         buttonStyle.up = TextureRegionDrawable(
             TextureRegion(
-                Texture(Gdx.files.internal("assets/undo.png"))
+                Texture(Gdx.files.internal("chapter09/jigsawPuzzle/undo.png"))
             )
         )
         restartButton = Button(buttonStyle)

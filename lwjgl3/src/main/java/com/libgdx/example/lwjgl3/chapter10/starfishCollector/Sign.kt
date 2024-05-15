@@ -7,7 +7,7 @@ class Sign(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     private var viewing: Boolean // used to determine if sign text is currently being displayed
 
     init {
-        loadTexture("assets/sign.png")
+        loadTexture("chapter10/starfishCollector/sign.png")
         text = " "
         viewing = false
     }

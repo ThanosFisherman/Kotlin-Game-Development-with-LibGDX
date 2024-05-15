@@ -7,6 +7,6 @@ class PuzzleArea(x: Float, y: Float, s: Stage) : DropTargetActor(x, y, s) {
     var col: Int = 0
 
     init {
-        loadTexture("assets/border.jpg")
+        loadTexture("chapter09/jigsawPuzzle/border.jpg")
     }
 }

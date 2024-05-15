@@ -6,7 +6,7 @@ import com.badlogic.gdx.scenes.scene2d.actions.Actions
 
 class ScreenTransition(x: Float, y: Float, s: Stage): BaseActor(x, y, s) {
     init {
-        loadTexture("assets/overlay.png")
+        loadTexture("chapter09/crazyEights/overlay.png")
         width = 800f
         height = 600f
         addAction(

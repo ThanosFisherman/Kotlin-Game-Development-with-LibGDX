@@ -49,7 +49,7 @@ abstract class BaseGame : Game() {
         val im = InputMultiplexer()
         Gdx.input.inputProcessor = im
 
-        val fontGenerator = FreeTypeFontGenerator(Gdx.files.internal("assets/OpenSans.ttf"))
+        val fontGenerator = FreeTypeFontGenerator(Gdx.files.internal("chapter12/OpenSans.ttf"))
         val fontParameters = FreeTypeFontParameter()
         fontParameters.size = 36
         fontParameters.color = Color.WHITE
@@ -63,16 +63,16 @@ abstract class BaseGame : Game() {
 
         labelStyle = LabelStyle()
         labelStyle!!.font = customFont
-        /*labelStyle!!.font = BitmapFont(Gdx.files.internal("assets/cooper.fnt"))*/
+        /*labelStyle!!.font = BitmapFont(Gdx.files.internal("chapter12/cooper.fnt"))*/
 
         textButtonStyle = TextButtonStyle()
-        val buttonTex = Texture(Gdx.files.internal("assets/button.png"))
+        val buttonTex = Texture(Gdx.files.internal("chapter12/button.png"))
         val buttonPatch = NinePatch(buttonTex, 24, 24, 24, 24)
         textButtonStyle!!.up = NinePatchDrawable(buttonPatch)
         textButtonStyle!!.font = customFont
         textButtonStyle!!.fontColor = Color.PINK
 
-        backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal("assets/audio/adventureBackground.wav"))
+        backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal("chapter12/audio/adventureBackground.wav"))
         backgroundMusic!!.isLooping = true
         backgroundMusic!!.volume = .5f
         backgroundMusic!!.play()

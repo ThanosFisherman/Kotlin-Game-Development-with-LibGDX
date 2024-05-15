@@ -28,7 +28,7 @@ class LevelScreen : BaseScreen() {
 
     override fun initialize() {
         val background = BaseActor(0f, 0f, mainStage)
-        background.loadTexture("assets/felt.jpg")
+        background.loadTexture("chapter09/cardPickup52/felt.jpg")
         BaseActor.setWorldBounds(background)
         for (r in 0 until Card.rankNames.size) {
             for (s in 0 until Card.suitNames.size) {
@@ -72,7 +72,7 @@ class LevelScreen : BaseScreen() {
         val buttonStyle = Button.ButtonStyle()
         buttonStyle.up = TextureRegionDrawable(
             TextureRegion(
-                Texture(Gdx.files.internal("assets/undo.png"))
+                Texture(Gdx.files.internal("chapter09/cardPickup52/undo.png"))
             )
         )
         restartButton = Button(buttonStyle)
@@ -103,7 +103,7 @@ class LevelScreen : BaseScreen() {
         uiTable.add(restartButton).padBottom(10f)
 
         ScreenTransition(0f, 0f, uiStage)
-        trumpetSound = Gdx.audio.newSound(Gdx.files.internal("assets/trumpet.mp3"))
+        trumpetSound = Gdx.audio.newSound(Gdx.files.internal("chapter09/cardPickup52/trumpet.mp3"))
     }
 
     override fun update(dt: Float) {

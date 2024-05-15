@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.g2d.Animation
 import com.badlogic.gdx.graphics.g2d.TextureRegion
 import com.badlogic.gdx.scenes.scene2d.Stage
 import com.badlogic.gdx.utils.Array
+import com.libgdx.example.lwjgl3.chapter12.BaseActor
 
 class Hero(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     private lateinit var north: Animation<TextureRegion>
@@ -15,7 +16,7 @@ class Hero(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     var facingAngle: Float
 
     init {
-        val fileName = "assets/hero.png"
+        val fileName = "chapter12/hero.png"
         val rows = 4
         val cols = 4
         val texture = Texture(Gdx.files.internal(fileName), true)

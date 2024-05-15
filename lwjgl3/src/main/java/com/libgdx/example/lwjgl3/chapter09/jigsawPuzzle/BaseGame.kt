@@ -43,7 +43,7 @@ abstract class BaseGame : Game() {
         }
 
         fun writeHighScore(highScore: Int) {
-            val file = Gdx.files.local("assets/highscore.txt")
+            val file = Gdx.files.local("chapter09/jigsawPuzzle/highscore.txt")
             if (highscore == null || highscore!! > highScore) {
                 highscore = highScore
                 file.writeString(highScore.toString(), false)
@@ -51,7 +51,7 @@ abstract class BaseGame : Game() {
         }
 
         private fun readFromFile(): Int {
-            val file = Gdx.files.internal("assets/highscore.txt")
+            val file = Gdx.files.internal("chapter09/jigsawPuzzle/highscore.txt")
             return file.readString().toInt()
         }
     }
@@ -61,7 +61,7 @@ abstract class BaseGame : Game() {
         var im = InputMultiplexer()
         Gdx.input.inputProcessor = im
 
-        val fontGenerator = FreeTypeFontGenerator(Gdx.files.internal("assets/OpenSans.ttf"))
+        val fontGenerator = FreeTypeFontGenerator(Gdx.files.internal("chapter09/jigsawPuzzle/OpenSans.ttf"))
         val fontParameters = FreeTypeFontParameter()
         fontParameters.size = 36
         fontParameters.color = Color.WHITE
@@ -75,10 +75,10 @@ abstract class BaseGame : Game() {
 
         labelStyle = LabelStyle()
         labelStyle!!.font = customFont
-        /*labelStyle!!.font = BitmapFont(Gdx.files.internal("assets/cooper.fnt"))*/
+        /*labelStyle!!.font = BitmapFont(Gdx.files.internal("chapter09/jigsawPuzzle/cooper.fnt"))*/
 
         textButtonStyle = TextButtonStyle()
-        val buttonTex = Texture(Gdx.files.internal("assets/button.png"))
+        val buttonTex = Texture(Gdx.files.internal("chapter09/jigsawPuzzle/button.png"))
         val buttonPatch = NinePatch(buttonTex, 24, 24, 24, 24)
         textButtonStyle!!.up = NinePatchDrawable(buttonPatch)
         textButtonStyle!!.font = customFont

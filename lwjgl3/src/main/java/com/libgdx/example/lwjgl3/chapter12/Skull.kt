@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion
 import com.badlogic.gdx.math.MathUtils
 import com.badlogic.gdx.scenes.scene2d.Stage
 import com.badlogic.gdx.utils.Array
+import com.libgdx.example.lwjgl3.chapter12.BaseActor
 import kotlin.math.atan2
 
 class Skull(x: Float, y: Float, s: Stage, private val hero: Hero) : BaseActor(x, y, s) {
@@ -17,7 +18,7 @@ class Skull(x: Float, y: Float, s: Stage, private val hero: Hero) : BaseActor(x,
     private var skullScreamed: Boolean = false
 
     init {
-        val fileName = "assets/skull.png"
+        val fileName = "chapter12/skull.png"
         val rows = 2
         val cols = 1
         val texture = Texture(Gdx.files.internal(fileName), true)
@@ -47,7 +48,7 @@ class Skull(x: Float, y: Float, s: Stage, private val hero: Hero) : BaseActor(x,
         setSpeed(MathUtils.random(50f, 80f))
         setMotionAngle(MathUtils.random(0f, 360f))
 
-        skullScreamAudio = Gdx.audio.newSound(Gdx.files.internal("assets/audio/skullScream.wav"))
+        skullScreamAudio = Gdx.audio.newSound(Gdx.files.internal("chapter12/audio/skullScream.wav"))
     }
 
     override fun act(dt: Float) {

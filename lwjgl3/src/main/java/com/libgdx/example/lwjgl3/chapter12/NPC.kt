@@ -1,6 +1,7 @@
 package chapter12
 
 import com.badlogic.gdx.scenes.scene2d.Stage
+import com.libgdx.example.lwjgl3.chapter12.BaseActor
 
 class NPC(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     // the text to be displayed
@@ -15,9 +16,9 @@ class NPC(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     fun setID(id: String) {
         ID = id
         when (ID) {
-            "gatekeeper" -> loadTexture("assets/npc-1.png")
-            "shopkeeper" -> loadTexture("assets/npc-2.png")
-            else -> loadTexture("assets/npc-3.png") // default image
+            "gatekeeper" -> loadTexture("chapter12/npc-1.png")
+            "shopkeeper" -> loadTexture("chapter12/npc-2.png")
+            else -> loadTexture("chapter12/npc-3.png") // default image
         }
     }
 

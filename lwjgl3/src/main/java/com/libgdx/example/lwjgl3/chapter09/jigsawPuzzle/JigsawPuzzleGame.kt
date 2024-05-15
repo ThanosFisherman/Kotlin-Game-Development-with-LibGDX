@@ -9,7 +9,7 @@ class JigsawPuzzleGame : BaseGame() {
     override fun create() {
         super.create()
 
-        backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal("assets/backgroundMusic.wav"))
+        backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal("chapter09/jigsawPuzzle/backgroundMusic.wav"))
         backgroundMusic.volume = .25f
         backgroundMusic.isLooping = true
         backgroundMusic.play()

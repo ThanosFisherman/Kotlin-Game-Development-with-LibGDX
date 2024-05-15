@@ -2,10 +2,11 @@ package chapter12
 
 import com.badlogic.gdx.math.MathUtils
 import com.badlogic.gdx.scenes.scene2d.Stage
+import com.libgdx.example.lwjgl3.chapter12.BaseActor
 
 class Flyer(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     init {
-        loadAnimationFromSheet("assets/enemy-flyer.png", 1, 4, .05f, true)
+        loadAnimationFromSheet("chapter12/enemy-flyer.png", 1, 4, .05f, true)
         setSize(48f, 48f)
         setBoundaryPolygon(6)
 

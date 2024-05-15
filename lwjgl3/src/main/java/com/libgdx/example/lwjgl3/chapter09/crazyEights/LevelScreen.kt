@@ -32,7 +32,7 @@ class LevelScreen : BaseScreen() {
     override fun initialize() {
         // Create cards
         val background = BaseActor(0f, 0f, mainStage)
-        background.loadTexture("assets/felt.jpg")
+        background.loadTexture("chapter09/crazyEights/felt.jpg")
         deckList = ArrayList()
         for (r in 0 until Card.rankNames.size) {
             for (s in 0 until Card.suitNames.size) {
@@ -73,7 +73,7 @@ class LevelScreen : BaseScreen() {
         val buttonStyle = Button.ButtonStyle()
         buttonStyle.up = TextureRegionDrawable(
             TextureRegion(
-                Texture(Gdx.files.internal("assets/undo.png"))
+                Texture(Gdx.files.internal("chapter09/crazyEights/undo.png"))
             )
         )
         restartButton = Button(buttonStyle)
@@ -103,7 +103,7 @@ class LevelScreen : BaseScreen() {
         uiTable.add(messageLabel).expandY().expandX().colspan(2).pad(50f)
 
         ScreenTransition(0f, 0f, uiStage)
-        trumpetSound = Gdx.audio.newSound(Gdx.files.internal("assets/trumpet.mp3"))
+        trumpetSound = Gdx.audio.newSound(Gdx.files.internal("chapter09/crazyEights/trumpet.mp3"))
     }
 
     override fun update(dt: Float) {

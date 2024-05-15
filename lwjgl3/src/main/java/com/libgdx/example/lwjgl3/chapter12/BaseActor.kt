@@ -1,4 +1,4 @@
-package chapter12
+package com.libgdx.example.lwjgl3.chapter12
 
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.g2d.Animation

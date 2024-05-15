@@ -5,7 +5,7 @@ import com.badlogic.gdx.scenes.scene2d.actions.Actions
 
 class Key(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     init {
-        loadTexture("assets/items/key.png")
+        loadTexture("chapter11/items/key.png")
 
         rotateBy(10f)
         val tilt = Actions.sequence(

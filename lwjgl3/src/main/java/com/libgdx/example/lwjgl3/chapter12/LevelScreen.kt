@@ -17,6 +17,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label
 import com.badlogic.gdx.scenes.scene2d.ui.Table
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable
 import com.badlogic.gdx.utils.Array
+import com.libgdx.example.lwjgl3.chapter12.BaseActor
 
 class LevelScreen : BaseScreen() {
     lateinit var hero: Hero
@@ -64,7 +65,7 @@ class LevelScreen : BaseScreen() {
     lateinit var focalPoints: Array<Vector2>
 
     override fun initialize() {
-        val tma = TilemapActor("assets/map.tmx", mainStage)
+        val tma = TilemapActor("chapter12/map.tmx", mainStage)
 
         for (obj in tma.getRectangleList("solid")) {
             val props = obj.properties
@@ -209,17 +210,17 @@ class LevelScreen : BaseScreen() {
         dialogBox.isVisible = false
 
         val healthIcon = BaseActor(0f, 0f, uiStage)
-        healthIcon.loadTexture("assets/heart-icon.png")
+        healthIcon.loadTexture("chapter12/heart-icon.png")
         val coinIcon = BaseActor(0f, 0f, uiStage)
-        coinIcon.loadTexture("assets/coin-icon.png")
+        coinIcon.loadTexture("chapter12/coin-icon.png")
         val arrowIcon = BaseActor(0f, 0f, uiStage)
-        arrowIcon.loadTexture("assets/arrow-icon.png")
+        arrowIcon.loadTexture("chapter12/arrow-icon.png")
         val bombIcon = BaseActor(0f, 0f, uiStage)
-        bombIcon.loadTexture("assets/bomb-icon.png")
+        bombIcon.loadTexture("chapter12/bomb-icon.png")
         bombIcon.setSize(32f, 32f)
 
         val buttonStyle = ButtonStyle()
-        buttonStyle.up = TextureRegionDrawable(TextureRegion(Texture(Gdx.files.internal("assets/undo.png"))))
+        buttonStyle.up = TextureRegionDrawable(TextureRegion(Texture(Gdx.files.internal("chapter12/undo.png"))))
         restartButton = Button(buttonStyle)
         restartButton.color = Color.CYAN
         restartButton.addListener { e: Event ->
@@ -254,21 +255,21 @@ class LevelScreen : BaseScreen() {
         uiTable.row()
         uiTable.add(dialogBox).colspan(12)
 
-        npcAudio = Gdx.audio.newSound(Gdx.files.internal("assets/audio/bell.wav"))
-        buyAudio = Gdx.audio.newSound(Gdx.files.internal("assets/audio/buy.mp3"))
-        coinPickupAudio = Gdx.audio.newSound(Gdx.files.internal("assets/audio/coinPickup.wav"))
-        enemyDeathAudio = Gdx.audio.newSound(Gdx.files.internal("assets/audio/enemyDeath.wav"))
-        gameOverAudio = Gdx.audio.newSound(Gdx.files.internal("assets/audio/gameOver.wav"))
-        hitHurtAudio = Gdx.audio.newSound(Gdx.files.internal("assets/audio/hitHurt.wav"))
-        playerDeathAudio = Gdx.audio.newSound(Gdx.files.internal("assets/audio/playerDeath.wav"))
-        shootArrowAudio = Gdx.audio.newSound(Gdx.files.internal("assets/audio/shootArrow.wav"))
-        swordSwooshAudio = Gdx.audio.newSound(Gdx.files.internal("assets/audio/swordSwoosh.wav"))
-        thudAudio = Gdx.audio.newSound(Gdx.files.internal("assets/audio/thud.wav"))
-        bushAudio = Gdx.audio.newSound(Gdx.files.internal("assets/audio/bush.wav"))
-        trumpetTriumphAudio = Gdx.audio.newSound(Gdx.files.internal("assets/audio/trumpetTriumph.mp3"))
-        explosionAudio = Gdx.audio.newSound(Gdx.files.internal("assets/audio/explosion.wav"))
-        walkInGrassAudio = Gdx.audio.newMusic(Gdx.files.internal("assets/audio/walkGrass.wav"))
-        fuseAudio = Gdx.audio.newMusic(Gdx.files.internal("assets/audio/fuse.wav"))
+        npcAudio = Gdx.audio.newSound(Gdx.files.internal("chapter12/audio/bell.wav"))
+        buyAudio = Gdx.audio.newSound(Gdx.files.internal("chapter12/audio/buy.mp3"))
+        coinPickupAudio = Gdx.audio.newSound(Gdx.files.internal("chapter12/audio/coinPickup.wav"))
+        enemyDeathAudio = Gdx.audio.newSound(Gdx.files.internal("chapter12/audio/enemyDeath.wav"))
+        gameOverAudio = Gdx.audio.newSound(Gdx.files.internal("chapter12/audio/gameOver.wav"))
+        hitHurtAudio = Gdx.audio.newSound(Gdx.files.internal("chapter12/audio/hitHurt.wav"))
+        playerDeathAudio = Gdx.audio.newSound(Gdx.files.internal("chapter12/audio/playerDeath.wav"))
+        shootArrowAudio = Gdx.audio.newSound(Gdx.files.internal("chapter12/audio/shootArrow.wav"))
+        swordSwooshAudio = Gdx.audio.newSound(Gdx.files.internal("chapter12/audio/swordSwoosh.wav"))
+        thudAudio = Gdx.audio.newSound(Gdx.files.internal("chapter12/audio/thud.wav"))
+        bushAudio = Gdx.audio.newSound(Gdx.files.internal("chapter12/audio/bush.wav"))
+        trumpetTriumphAudio = Gdx.audio.newSound(Gdx.files.internal("chapter12/audio/trumpetTriumph.mp3"))
+        explosionAudio = Gdx.audio.newSound(Gdx.files.internal("chapter12/audio/explosion.wav"))
+        walkInGrassAudio = Gdx.audio.newMusic(Gdx.files.internal("chapter12/audio/walkGrass.wav"))
+        fuseAudio = Gdx.audio.newMusic(Gdx.files.internal("chapter12/audio/fuse.wav"))
 
         ScreenTransition(0f, 0f, uiStage)
     }

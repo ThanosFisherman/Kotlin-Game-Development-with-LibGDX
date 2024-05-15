@@ -34,7 +34,7 @@ class LevelScreen : BaseScreen() {
     private lateinit var heartActors: ArrayList<BaseActor>
 
     override fun initialize() {
-        val tma = TilemapActor("assets/map.tmx", mainStage)
+        val tma = TilemapActor("chapter11/map.tmx", mainStage)
 
         for (obj in tma.getRectangleList("solid")) {
             val props = obj.properties
@@ -111,7 +111,7 @@ class LevelScreen : BaseScreen() {
         heartTable = Table()
         for (i in 1..jack.getHealth()) {
             val heartIcon = BaseActor(0f, 0f, uiStage)
-            heartIcon.loadTexture("assets/heart-icon.png")
+            heartIcon.loadTexture("chapter11/heart-icon.png")
             heartIcon.width = 20f
             heartIcon.height = 20f
             heartTable.add(heartIcon)
@@ -132,14 +132,14 @@ class LevelScreen : BaseScreen() {
         uiTable.add().row()
         uiTable.add(messageLabel).colspan(3).expandY()
 
-        coinsSound = Gdx.audio.newSound(Gdx.files.internal("assets/coin.wav"))
-        jumpSound = Gdx.audio.newSound(Gdx.files.internal("assets/jump.wav"))
-        lockSound = Gdx.audio.newSound(Gdx.files.internal("assets/lock.wav"))
-        springboardSound = Gdx.audio.newSound(Gdx.files.internal("assets/springboard.wav"))
-        tickTockSound = Gdx.audio.newSound(Gdx.files.internal("assets/tick-tock.wav"))
-        winSound = Gdx.audio.newSound(Gdx.files.internal("assets/trumpet.mp3"))
-        timeupSound = Gdx.audio.newSound(Gdx.files.internal("assets/timer-ends-time-up.wav"))
-        keyCollectSound = Gdx.audio.newSound(Gdx.files.internal("assets/keyCollect.wav"))
+        coinsSound = Gdx.audio.newSound(Gdx.files.internal("chapter11/coin.wav"))
+        jumpSound = Gdx.audio.newSound(Gdx.files.internal("chapter11/jump.wav"))
+        lockSound = Gdx.audio.newSound(Gdx.files.internal("chapter11/lock.wav"))
+        springboardSound = Gdx.audio.newSound(Gdx.files.internal("chapter11/springboard.wav"))
+        tickTockSound = Gdx.audio.newSound(Gdx.files.internal("chapter11/tick-tock.wav"))
+        winSound = Gdx.audio.newSound(Gdx.files.internal("chapter11/trumpet.mp3"))
+        timeupSound = Gdx.audio.newSound(Gdx.files.internal("chapter11/timer-ends-time-up.wav"))
+        keyCollectSound = Gdx.audio.newSound(Gdx.files.internal("chapter11/keyCollect.wav"))
     }
 
     override fun update(dt: Float) {
@@ -234,7 +234,7 @@ class LevelScreen : BaseScreen() {
                 val keyColor = key.color
                 key.remove()
                 val keyIcon = BaseActor(0f, 0f, uiStage)
-                keyIcon.loadTexture("assets/key-icon.png")
+                keyIcon.loadTexture("chapter11/key-icon.png")
                 keyIcon.color = keyColor
                 keyTable.add(keyIcon)
                 keyList.add(keyColor)

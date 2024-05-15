@@ -16,15 +16,15 @@ class Card(x: Float, y: Float, s: Stage) : DragAndDropActor(x, y, s) {
     val suitName: String
         get() = suitNames[suitValue]
 
-    private val clickClickSound = Gdx.audio.newSound(Gdx.files.internal("assets/click-click.wav"))
-    private val lowWhooshSound = Gdx.audio.newSound(Gdx.files.internal("assets/low-whoosh.wav"))
-    private val whooshSound = Gdx.audio.newSound(Gdx.files.internal("assets/whoosh.wav"))
-    private val tingSound = Gdx.audio.newSound(Gdx.files.internal("assets/ting.wav"))
+    private val clickClickSound = Gdx.audio.newSound(Gdx.files.internal("chapter09/crazyEights/click-click.wav"))
+    private val lowWhooshSound = Gdx.audio.newSound(Gdx.files.internal("chapter09/crazyEights/low-whoosh.wav"))
+    private val whooshSound = Gdx.audio.newSound(Gdx.files.internal("chapter09/crazyEights/whoosh.wav"))
+    private val tingSound = Gdx.audio.newSound(Gdx.files.internal("chapter09/crazyEights/ting.wav"))
 
     fun setRankSuitValues(r: Int, s: Int) {
         rankValue = r
         suitValue = s
-        val imageFileName = "assets/card$suitName$rankName.png"
+        val imageFileName = "chapter09/crazyEights/card$suitName$rankName.png"
         loadTexture(imageFileName)
         setSize(80f, 100f)
         setBoundaryRectangle()

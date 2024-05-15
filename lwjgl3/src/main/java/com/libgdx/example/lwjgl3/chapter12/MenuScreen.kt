@@ -9,13 +9,14 @@ import com.badlogic.gdx.scenes.scene2d.Group
 import com.badlogic.gdx.scenes.scene2d.actions.Actions
 import com.badlogic.gdx.scenes.scene2d.ui.Label
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton
+import com.libgdx.example.lwjgl3.chapter12.BaseActor
 
 class MenuScreen : BaseScreen() {
     private lateinit var title: Label
 
     override fun initialize() {
         val background = BaseActor(0f, 0f, mainStage)
-        background.loadTexture("assets/overlay.png")
+        background.loadTexture("chapter12/overlay.png")
         background.width = Gdx.graphics.width.toFloat()
         background.height = Gdx.graphics.height.toFloat()
         background.color = Color.PINK

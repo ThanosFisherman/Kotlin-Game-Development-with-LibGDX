@@ -16,10 +16,10 @@ class PuzzlePiece(x: Float, y: Float, s: Stage) : DragAndDropActor(x, y, s) {
 
     private lateinit var rotations: Rotations
 
-    private val clickClickSound = Gdx.audio.newSound(Gdx.files.internal("assets/click-click.wav"))
-    private val lowWhooshSound = Gdx.audio.newSound(Gdx.files.internal("assets/low-whoosh.wav"))
-    private val whooshSound = Gdx.audio.newSound(Gdx.files.internal("assets/whoosh.wav"))
-    private val tingSound = Gdx.audio.newSound(Gdx.files.internal("assets/ting.wav"))
+    private val clickClickSound = Gdx.audio.newSound(Gdx.files.internal("chapter09/jigsawPuzzle/click-click.wav"))
+    private val lowWhooshSound = Gdx.audio.newSound(Gdx.files.internal("chapter09/jigsawPuzzle/low-whoosh.wav"))
+    private val whooshSound = Gdx.audio.newSound(Gdx.files.internal("chapter09/jigsawPuzzle/whoosh.wav"))
+    private val tingSound = Gdx.audio.newSound(Gdx.files.internal("chapter09/jigsawPuzzle/ting.wav"))
 
     var puzzleArea: PuzzleArea? = null
 

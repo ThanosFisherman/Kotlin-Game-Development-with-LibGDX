@@ -34,7 +34,7 @@ To extract each animation per row LibGDX's TextureRegion class [split](https://l
 
 South, West, East and North represents the direction the character is moving, the algorithm used is shown below:
 ```
-val fileName = "assets/hero.png"
+val fileName = "chapter12/hero.png"
 val rows = 4
 val cols = 4
 val texture = Texture(Gdx.files.internal(fileName), true)

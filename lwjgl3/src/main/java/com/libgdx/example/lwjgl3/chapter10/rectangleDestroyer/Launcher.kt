@@ -1,4 +1,4 @@
-package com.libgdx.example.lwjgl3.chapter09.cardPickup52
+package com.libgdx.example.lwjgl3.chapter10.rectangleDestroyer
 
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration
@@ -15,6 +15,6 @@ object Launcher {
                 setTitle("52 Card Pickup")
             }
 
-        Lwjgl3Application(PickupGame(), config)
+        Lwjgl3Application(RectangleDestroyer(), config)
     }
 }

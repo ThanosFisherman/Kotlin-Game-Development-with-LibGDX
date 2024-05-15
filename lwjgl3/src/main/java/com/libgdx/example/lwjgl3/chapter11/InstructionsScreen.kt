@@ -9,7 +9,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label
 class InstructionsScreen: BaseScreen() {
     override fun initialize() {
         val background = BaseActor(0f, 0f, mainStage)
-        background.loadTexture("assets/overlay.png")
+        background.loadTexture("chapter11/overlay.png")
         background.width = 800f
         background.height = 640f
 

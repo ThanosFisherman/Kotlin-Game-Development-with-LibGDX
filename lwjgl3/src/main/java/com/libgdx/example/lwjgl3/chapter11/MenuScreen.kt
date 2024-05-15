@@ -17,18 +17,18 @@ class MenuScreen : BaseScreen() {
     private lateinit var title: Label
 
     override fun initialize() {
-        Parallax(1600f, 0f, mainStage, "assets/b5.png", 2f)
-        Parallax(0f, 0f, mainStage, "assets/b5.png", 2f)
-        Parallax(1600f, 0f, mainStage, "assets/b4.png", 5f)
-        Parallax(0f, 0f, mainStage, "assets/b4.png", 5f)
-        Parallax(1600f, 0f, mainStage, "assets/b3.png", 10f)
-        Parallax(0f, 0f, mainStage, "assets/b3.png", 10f)
-        Parallax(1600f, 0f, mainStage, "assets/b2.png", 20f)
-        Parallax(0f, 0f, mainStage, "assets/b2.png", 20f)
-        Parallax(1600f, 0f, mainStage, "assets/b1.png", 40f)
-        Parallax(0f, 0f, mainStage, "assets/b1.png", 40f)
-        Parallax(0f, 0f, mainStage, "assets/b0.png", 60f)
-        Parallax(1600f, 0f, mainStage, "assets/b0.png", 60f)
+        Parallax(1600f, 0f, mainStage, "chapter11/b5.png", 2f)
+        Parallax(0f, 0f, mainStage, "chapter11/b5.png", 2f)
+        Parallax(1600f, 0f, mainStage, "chapter11/b4.png", 5f)
+        Parallax(0f, 0f, mainStage, "chapter11/b4.png", 5f)
+        Parallax(1600f, 0f, mainStage, "chapter11/b3.png", 10f)
+        Parallax(0f, 0f, mainStage, "chapter11/b3.png", 10f)
+        Parallax(1600f, 0f, mainStage, "chapter11/b2.png", 20f)
+        Parallax(0f, 0f, mainStage, "chapter11/b2.png", 20f)
+        Parallax(1600f, 0f, mainStage, "chapter11/b1.png", 40f)
+        Parallax(0f, 0f, mainStage, "chapter11/b1.png", 40f)
+        Parallax(0f, 0f, mainStage, "chapter11/b0.png", 60f)
+        Parallax(1600f, 0f, mainStage, "chapter11/b0.png", 60f)
 
         val startButton = TextButton("Start", BaseGame.textButtonStyle)
         startButton.addListener { e: Event ->

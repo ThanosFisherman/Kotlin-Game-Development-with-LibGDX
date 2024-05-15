@@ -10,7 +10,7 @@ class MenuScreen : BaseScreen() {
     override fun initialize() {
         // background
         val background = BaseActor(0f, 0f, mainStage)
-        background.loadTexture("assets/space.png")
+        background.loadTexture("chapter10/rectangleDestroyer/space.png")
 
         // user interface
         val titleLabel = Label("Rectangle Destroyer", BaseGame.labelStyle)
