@@ -21,12 +21,12 @@ class Turtle(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
 
     init {
         val fileNames: Array<String> = Array()
-        fileNames.add("assets/turtle-1.png")
-        fileNames.add("assets/turtle-2.png")
-        fileNames.add("assets/turtle-3.png")
-        fileNames.add("assets/turtle-4.png")
-        fileNames.add("assets/turtle-5.png")
-        fileNames.add("assets/turtle-6.png")
+        fileNames.add("chapter15/starfishCollectorShaders/turtle-1.png")
+        fileNames.add("chapter15/starfishCollectorShaders/turtle-2.png")
+        fileNames.add("chapter15/starfishCollectorShaders/turtle-3.png")
+        fileNames.add("chapter15/starfishCollectorShaders/turtle-4.png")
+        fileNames.add("chapter15/starfishCollectorShaders/turtle-5.png")
+        fileNames.add("chapter15/starfishCollectorShaders/turtle-6.png")
         loadAnimationFromFiles(fileNames, .1f, true)
 
         setBoundaryPolygon(8)
@@ -35,17 +35,17 @@ class Turtle(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
         setMaxSpeed(100f) // pixels/seconds
         setDeceleration(400f) // time to reach zero speed = 100/400 = .25 seconds
 
-        vertexShaderCode = Gdx.files.internal("assets/shaders/default.vs").readString()
+        vertexShaderCode = Gdx.files.internal("chapter15/starfishCollectorShaders/shaders/default.vs").readString()
 
-        fragmenterShaderCode = Gdx.files.internal("assets/shaders/default.fs").readString()
-        // fragmenterShaderCode = Gdx.files.internal("assets/shaders/grayscale.fs").readString()
-        // fragmenterShaderCode = Gdx.files.internal("assets/shaders/invert.fs").readString()
-        // fragmenterShaderCode = Gdx.files.internal("assets/shaders/grayscale-pulse.fs").readString()
-        // fragmenterShaderCode = Gdx.files.internal("assets/shaders/border.fs").readString()
-        // fragmenterShaderCode = Gdx.files.internal("assets/shaders/blur.fs").readString()
-        // fragmenterShaderCode = Gdx.files.internal("assets/shaders/glow-pulse.fs").readString()
-        // fragmenterShaderCode = Gdx.files.internal("assets/shaders/wave.fs").readString()
-        // fragmenterShaderCode = Gdx.files.internal("assets/shaders/red.fs").readString()
+        fragmenterShaderCode = Gdx.files.internal("chapter15/starfishCollectorShaders/shaders/default.fs").readString()
+        // fragmenterShaderCode = Gdx.files.internal("chapter15/starfishCollectorShaders/shaders/grayscale.fs").readString()
+        // fragmenterShaderCode = Gdx.files.internal("chapter15/starfishCollectorShaders/shaders/invert.fs").readString()
+        // fragmenterShaderCode = Gdx.files.internal("chapter15/starfishCollectorShaders/shaders/grayscale-pulse.fs").readString()
+        // fragmenterShaderCode = Gdx.files.internal("chapter15/starfishCollectorShaders/shaders/border.fs").readString()
+        // fragmenterShaderCode = Gdx.files.internal("chapter15/starfishCollectorShaders/shaders/blur.fs").readString()
+        // fragmenterShaderCode = Gdx.files.internal("chapter15/starfishCollectorShaders/shaders/glow-pulse.fs").readString()
+        // fragmenterShaderCode = Gdx.files.internal("chapter15/starfishCollectorShaders/shaders/wave.fs").readString()
+        // fragmenterShaderCode = Gdx.files.internal("chapter15/starfishCollectorShaders/shaders/red.fs").readString()
 
         shaderProgram = ShaderProgram(vertexShaderCode, fragmenterShaderCode)
         if (!shaderProgram.isCompiled)

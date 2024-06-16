@@ -44,7 +44,7 @@ class LevelScreen : BaseTouchScreen() {
 
     override fun initialize() {
         val space = BaseActor(0f, 0f, mainStage)
-        space.loadTexture("assets/space.png")
+        space.loadTexture("chapter13/spaceRocksTouchscreen/space.png")
         space.setSize(800f, 600f)
 
         BaseActor.setWorldBounds(space)
@@ -59,16 +59,16 @@ class LevelScreen : BaseTouchScreen() {
         Rock(200f, 300f, mainStage, 1.5f, 5f)
         Rock(200f, 500f, mainStage, 1.5f, 5f)
 
-        winSound = Gdx.audio.newSound(Gdx.files.internal("assets/congratulations.wav"))
-        explosionSound = Gdx.audio.newSound(Gdx.files.internal("assets/explosion.wav"))
-        shieldSound = Gdx.audio.newSound(Gdx.files.internal("assets/shield.wav"))
-        gameOverSound = Gdx.audio.newSound(Gdx.files.internal("assets/game-over.wav"))
-        warpSound = Gdx.audio.newSound(Gdx.files.internal("assets/warp.wav"))
-        ufoSound = Gdx.audio.newSound(Gdx.files.internal("assets/ufo.wav"))
-        shootSound = Gdx.audio.newSound(Gdx.files.internal("assets/shoot.wav"))
-        shieldHitSound = Gdx.audio.newSound(Gdx.files.internal("assets/shieldHit.wav"))
+        winSound = Gdx.audio.newSound(Gdx.files.internal("chapter13/spaceRocksTouchscreen/congratulations.wav"))
+        explosionSound = Gdx.audio.newSound(Gdx.files.internal("chapter13/spaceRocksTouchscreen/explosion.wav"))
+        shieldSound = Gdx.audio.newSound(Gdx.files.internal("chapter13/spaceRocksTouchscreen/shield.wav"))
+        gameOverSound = Gdx.audio.newSound(Gdx.files.internal("chapter13/spaceRocksTouchscreen/game-over.wav"))
+        warpSound = Gdx.audio.newSound(Gdx.files.internal("chapter13/spaceRocksTouchscreen/warp.wav"))
+        ufoSound = Gdx.audio.newSound(Gdx.files.internal("chapter13/spaceRocksTouchscreen/ufo.wav"))
+        shootSound = Gdx.audio.newSound(Gdx.files.internal("chapter13/spaceRocksTouchscreen/shoot.wav"))
+        shieldHitSound = Gdx.audio.newSound(Gdx.files.internal("chapter13/spaceRocksTouchscreen/shieldHit.wav"))
 
-        music = Gdx.audio.newMusic(Gdx.files.internal("assets/epic-retro-synth-music.wav"))
+        music = Gdx.audio.newMusic(Gdx.files.internal("chapter13/spaceRocksTouchscreen/epic-retro-synth-music.wav"))
         music.isLooping = true
         music.volume = .75f
         music.play()
@@ -76,16 +76,16 @@ class LevelScreen : BaseTouchScreen() {
         Gdx.graphics.setWindowedMode(800, 800)
         initializeControlArea()
         val controlBackground = BaseActor(0f, 0f, controlStage)
-        controlBackground.loadTexture("assets/pixels.jpg")
+        controlBackground.loadTexture("chapter13/spaceRocksTouchscreen/pixels.jpg")
 
         // touchpad
         val touchStyle = TouchpadStyle()
 
-        val padKnobTex = Texture(Gdx.files.internal("assets/joystick-knob.png"))
+        val padKnobTex = Texture(Gdx.files.internal("chapter13/spaceRocksTouchscreen/joystick-knob.png"))
         val padKnobReg = TextureRegion(padKnobTex)
         touchStyle.knob = TextureRegionDrawable(padKnobReg)
 
-        val padBackTex = Texture(Gdx.files.internal("assets/joystick-background.png"))
+        val padBackTex = Texture(Gdx.files.internal("chapter13/spaceRocksTouchscreen/joystick-background.png"))
         val padBackReg = TextureRegion(padBackTex)
         touchStyle.background = TextureRegionDrawable(padBackReg)
 
@@ -93,7 +93,7 @@ class LevelScreen : BaseTouchScreen() {
 
         // buttons
         val buttonStyle = ButtonStyle()
-        buttonStyle.up = TextureRegionDrawable(TextureRegion(Texture(Gdx.files.internal("assets/nes_button.png"))))
+        buttonStyle.up = TextureRegionDrawable(TextureRegion(Texture(Gdx.files.internal("chapter13/spaceRocksTouchscreen/nes_button.png"))))
 
         val restartButton = Button(buttonStyle)
         restartButton.color = Color.BROWN
@@ -277,7 +277,7 @@ class LevelScreen : BaseTouchScreen() {
         when (win) {
             true -> {
                 val messageWin = BaseActor(0f, 0f, uiStage)
-                messageWin.loadTexture("assets/message-win.png")
+                messageWin.loadTexture("chapter13/spaceRocksTouchscreen/message-win.png")
                 messageWin.centerAtPosition(400f, 300f)
                 messageWin.setOpacity(0f)
                 messageWin.addAction(Actions.fadeIn(1f))
@@ -286,7 +286,7 @@ class LevelScreen : BaseTouchScreen() {
             }
             false -> {
                 val messageLose = BaseActor(0f, 0f, uiStage)
-                messageLose.loadTexture("assets/message-lose.png")
+                messageLose.loadTexture("chapter13/spaceRocksTouchscreen/message-lose.png")
                 messageLose.centerAtPosition(400f, 300f)
                 messageLose.setOpacity(0f)
                 messageLose.addAction(Actions.fadeIn(1f))

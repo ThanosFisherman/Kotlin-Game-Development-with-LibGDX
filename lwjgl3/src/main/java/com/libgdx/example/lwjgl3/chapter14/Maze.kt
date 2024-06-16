@@ -1,5 +1,7 @@
-package chapter14
+package com.libgdx.example.lwjgl3.chapter14
 
+import chapter14.BaseActor
+import chapter14.Room
 import com.badlogic.gdx.scenes.scene2d.Stage
 import kotlin.math.floor
 import kotlin.math.roundToInt

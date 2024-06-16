@@ -1,5 +1,6 @@
-package chapter16.rectangleDestroyer3D
+package com.libgdx.example.lwjgl3.chapter16.rectangleDestroyer3D
 
+import chapter16.rectangleDestroyer3D.*
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.Input.Keys
 import com.badlogic.gdx.graphics.Color
@@ -28,10 +29,10 @@ class LevelScreen : BaseScreen() {
         // background
         val screen = Box(0f, 0f, 0f, mainStage3D)
         screen.setScale(16f, 12f, 0.1f)
-        screen.loadTexture("assets/space.png")
+        screen.loadTexture("chapter16/rectangleDestroyer3D/space.png")
 
         // bricks
-        val tma = TilemapActor("assets/map.tmx")
+        val tma = TilemapActor("chapter16/rectangleDestroyer3D/map.tmx")
         for (obj in tma.getTileList("brick")) {
             val props = obj.properties
             val b = Brick(
@@ -60,7 +61,7 @@ class LevelScreen : BaseScreen() {
 
         // paddle
         paddle = Box(0f, -5.25f, 0f, mainStage3D)
-        paddle.loadTexture("assets/brick-gray.png")
+        paddle.loadTexture("chapter16/rectangleDestroyer3D/brick-gray.png")
         paddle.setColor(Color.GOLDENROD)
         paddle.setScale(2f, .5f, .5f)
         paddle.setBaseRectangle()

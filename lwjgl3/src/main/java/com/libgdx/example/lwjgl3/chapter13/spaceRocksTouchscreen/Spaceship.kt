@@ -18,7 +18,7 @@ class Spaceship(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     init {
         this.s = s
 
-        loadTexture("assets/spaceship.png")
+        loadTexture("chapter13/spaceRocksTouchscreen/spaceship.png")
         setScale(Constants.scale, Constants.scale)
         setBoundaryPolygon(8)
 
@@ -35,7 +35,7 @@ class Spaceship(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
         shield.centerAtPosition(width / 2, height / 2)
         shieldPower = 100
 
-        thrustersSound = Gdx.audio.newMusic(Gdx.files.internal("assets/thrusters.wav"))
+        thrustersSound = Gdx.audio.newMusic(Gdx.files.internal("chapter13/spaceRocksTouchscreen/thrusters.wav"))
     }
 
     override fun act(dt: Float) {

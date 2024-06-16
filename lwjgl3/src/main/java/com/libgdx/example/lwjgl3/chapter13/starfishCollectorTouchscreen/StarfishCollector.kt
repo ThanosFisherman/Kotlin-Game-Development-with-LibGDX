@@ -1,5 +1,6 @@
-package chapter13.starfishCollectorTouchscreen
+package com.libgdx.example.lwjgl3.chapter13.starfishCollectorTouchscreen
 
+import chapter13.starfishCollectorTouchscreen.*
 import com.badlogic.gdx.scenes.scene2d.actions.Actions
 
 class StarfishCollector: GameBeta() {
@@ -9,7 +10,7 @@ class StarfishCollector: GameBeta() {
 
     override fun initialize() {
         val ocean = BaseActor(0f, 0f, mainStage)
-        ocean.loadTexture("assets/water-border.jpg")
+        ocean.loadTexture("chapter13/starfishCollectorTouchscreen/water-border.jpg")
         ocean.setSize(1200f, 900f)
         BaseActor.setWorldBounds(ocean)
 
@@ -45,7 +46,7 @@ class StarfishCollector: GameBeta() {
         if(BaseActor.count(mainStage, Starfish::class.java.canonicalName) == 0 && !win) {
             win = true
             val youWinMessage = BaseActor(0f, 0f, uiStage)
-            youWinMessage.loadTexture("assets/you-win.png")
+            youWinMessage.loadTexture("chapter13/starfishCollectorTouchscreen/you-win.png")
             youWinMessage.centerAtPosition(400f, 300f)
             youWinMessage.setOpacity(0f)
             youWinMessage.addAction(Actions.delay(1f))

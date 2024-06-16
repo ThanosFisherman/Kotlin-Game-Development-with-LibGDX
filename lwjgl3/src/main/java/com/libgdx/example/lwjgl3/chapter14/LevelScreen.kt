@@ -5,11 +5,11 @@ import com.badlogic.gdx.Input.Keys
 import com.badlogic.gdx.audio.Music
 import com.badlogic.gdx.audio.Sound
 import com.badlogic.gdx.graphics.Color
-import com.badlogic.gdx.graphics.OrthographicCamera
 import com.badlogic.gdx.math.MathUtils
 import com.badlogic.gdx.math.Vector2
 import com.badlogic.gdx.scenes.scene2d.actions.Actions
 import com.badlogic.gdx.scenes.scene2d.ui.Label
+import com.libgdx.example.lwjgl3.chapter14.Maze
 
 class LevelScreen : BaseScreen() {
     private lateinit var maze: Maze
@@ -32,7 +32,7 @@ class LevelScreen : BaseScreen() {
 
     override fun initialize() {
         val background = BaseActor(0f, 0f, mainStage)
-        background.loadTexture("assets/white.png")
+        background.loadTexture("chapter14/white.png")
         background.color = Color.GRAY
         background.setSize(768f, 700f)
 
@@ -66,7 +66,7 @@ class LevelScreen : BaseScreen() {
         heroIcon.setSize(45f, 45f)
 
         val timeIcon = BaseActor(0f, 0f, uiStage)
-        timeIcon.loadTexture("assets/timer.png")
+        timeIcon.loadTexture("chapter14/timer.png")
 
         coinsLabel = Label("Coins left:", BaseGame.labelStyle)
         coinsLabel.color = Color.GOLD
@@ -85,12 +85,12 @@ class LevelScreen : BaseScreen() {
         uiTable.row()
         uiTable.add(messageLabel).colspan(4).expandY()
 
-        coinSound = Gdx.audio.newSound(Gdx.files.internal("assets/coin.wav"))
-        hurtSound = Gdx.audio.newSound(Gdx.files.internal("assets/hitHurt.wav"))
-        winSound = Gdx.audio.newSound(Gdx.files.internal("assets/trumpetTriumph.mp3"))
-        looseSound = Gdx.audio.newSound(Gdx.files.internal("assets/playerDeath.wav"))
-        powerupSound = Gdx.audio.newSound(Gdx.files.internal("assets/powerup.wav"))
-        windMusic = Gdx.audio.newMusic(Gdx.files.internal("assets/wind.mp3"))
+        coinSound = Gdx.audio.newSound(Gdx.files.internal("chapter14/coin.wav"))
+        hurtSound = Gdx.audio.newSound(Gdx.files.internal("chapter14/hitHurt.wav"))
+        winSound = Gdx.audio.newSound(Gdx.files.internal("chapter14/trumpetTriumph.mp3"))
+        looseSound = Gdx.audio.newSound(Gdx.files.internal("chapter14/playerDeath.wav"))
+        powerupSound = Gdx.audio.newSound(Gdx.files.internal("chapter14/powerup.wav"))
+        windMusic = Gdx.audio.newMusic(Gdx.files.internal("chapter14/wind.mp3"))
         windMusic.isLooping = true
         windMusic.volume = .1f
         windMusic.play()

@@ -5,6 +5,8 @@ import com.badlogic.gdx.Input.Keys
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.math.Vector3
 import com.badlogic.gdx.scenes.scene2d.ui.Label
+import com.libgdx.example.lwjgl3.chapter16.starfishCollector3D.BaseGame
+import com.libgdx.example.lwjgl3.chapter16.starfishCollector3D.Starfish
 
 class LevelScreen : BaseScreen() {
     lateinit var turtle: Turtle
@@ -13,11 +15,11 @@ class LevelScreen : BaseScreen() {
 
     override fun initialize() {
         val floor = Box(0f, 0f, 0f, mainStage3D)
-        floor.loadTexture("assets/water.jpg")
+        floor.loadTexture("chapter16/starfishCollector3D/water.jpg")
         floor.setScale(500f, .1f, 500f)
 
         val skydome = Sphere(0f, 0f, 0f, mainStage3D)
-        skydome.loadTexture("assets/sky-sphere.png")
+        skydome.loadTexture("chapter16/starfishCollector3D/sky-sphere.png")
         // when scaling the negative z-value inverts the sphere so that the texture is rendered on the inside
         skydome.setScale(500f, 500f, -500f)
 

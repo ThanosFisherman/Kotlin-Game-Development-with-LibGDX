@@ -1,5 +1,6 @@
-package chapter16.rectangleDestroyer3D
+package com.libgdx.example.lwjgl3.chapter16.rectangleDestroyer3D
 
+import chapter16.rectangleDestroyer3D.BaseActor3D
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.PerspectiveCamera

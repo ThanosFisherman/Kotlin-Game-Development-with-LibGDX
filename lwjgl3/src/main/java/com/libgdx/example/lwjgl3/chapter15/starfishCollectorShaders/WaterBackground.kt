@@ -17,8 +17,8 @@ class WaterBackground(x: Float, y: Float, texturePath: String, s: Stage) : BaseA
         loadTexture(texturePath)
         //setPosition(40f, 40f) // beach shore offset
 
-        vertexShaderCode = Gdx.files.internal("assets/shaders/default.vs").readString()
-        fragmenterShaderCode = Gdx.files.internal("assets/shaders/wave.fs").readString()
+        vertexShaderCode = Gdx.files.internal("chapter15/starfishCollectorShaders/shaders/default.vs").readString()
+        fragmenterShaderCode = Gdx.files.internal("chapter15/starfishCollectorShaders/shaders/wave.fs").readString()
         shaderProgram = ShaderProgram(vertexShaderCode, fragmenterShaderCode)
         if (!shaderProgram.isCompiled)
             println("Shader compile error: " + shaderProgram.log)

@@ -5,7 +5,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage
 
 class Solid(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     init {
-        loadTexture("assets/brick-gray.png")
+        loadTexture("chapter13/rectangleDestroyerTouchscreen/brick-gray.png")
         color = Color.FIREBRICK
 
         setSpeed(100f)

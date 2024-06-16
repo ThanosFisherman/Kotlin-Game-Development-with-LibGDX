@@ -7,7 +7,7 @@ class Ball(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     private var paused: Boolean = true
 
     init {
-        loadTexture("assets/ball.png")
+        loadTexture("chapter13/rectangleDestroyerTouchscreen/ball.png")
         setSpeed(400f)
         setMotionAngle(90f)
         setBoundaryPolygon(12)

@@ -1,4 +1,4 @@
-package chapter15.starfishCollectorShaders
+package com.libgdx.example.lwjgl3.chapter15.starfishCollectorShaders
 
 import com.badlogic.gdx.Game
 import com.badlogic.gdx.Gdx

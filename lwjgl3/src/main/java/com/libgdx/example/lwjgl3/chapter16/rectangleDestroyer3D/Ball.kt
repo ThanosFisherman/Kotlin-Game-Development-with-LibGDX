@@ -3,6 +3,7 @@ package chapter16.rectangleDestroyer3D
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.math.MathUtils
 import com.badlogic.gdx.math.Vector2
+import com.libgdx.example.lwjgl3.chapter16.rectangleDestroyer3D.Stage3D
 import kotlin.math.abs
 
 open class Ball (x: Float, y: Float, z: Float, s: Stage3D) : Sphere(x, y, z, s) {

@@ -34,7 +34,7 @@ class LevelScreen : BaseGamepadScreen() {
 
     override fun initialize() {
         val space = BaseActor(0f, 0f, mainStage)
-        space.loadTexture("assets/space.png")
+        space.loadTexture("chapter13/spaceRocksGamepad/space.png")
         space.setSize(800f, 600f)
 
         BaseActor.setWorldBounds(space)
@@ -49,15 +49,15 @@ class LevelScreen : BaseGamepadScreen() {
         Rock(200f, 300f, mainStage, 1.5f, 5f)
         Rock(200f, 500f, mainStage, 1.5f, 5f)
 
-        winSound = Gdx.audio.newSound(Gdx.files.internal("assets/congratulations.wav"))
-        explosionSound = Gdx.audio.newSound(Gdx.files.internal("assets/explosion.wav"))
-        shieldSound = Gdx.audio.newSound(Gdx.files.internal("assets/shield.wav"))
-        gameOverSound = Gdx.audio.newSound(Gdx.files.internal("assets/game-over.wav"))
-        warpSound = Gdx.audio.newSound(Gdx.files.internal("assets/warp.wav"))
-        ufoSound = Gdx.audio.newSound(Gdx.files.internal("assets/ufo.wav"))
-        shieldHitSound = Gdx.audio.newSound(Gdx.files.internal("assets/shieldHit.wav"))
+        winSound = Gdx.audio.newSound(Gdx.files.internal("chapter13/spaceRocksGamepad/congratulations.wav"))
+        explosionSound = Gdx.audio.newSound(Gdx.files.internal("chapter13/spaceRocksGamepad/explosion.wav"))
+        shieldSound = Gdx.audio.newSound(Gdx.files.internal("chapter13/spaceRocksGamepad/shield.wav"))
+        gameOverSound = Gdx.audio.newSound(Gdx.files.internal("chapter13/spaceRocksGamepad/game-over.wav"))
+        warpSound = Gdx.audio.newSound(Gdx.files.internal("chapter13/spaceRocksGamepad/warp.wav"))
+        ufoSound = Gdx.audio.newSound(Gdx.files.internal("chapter13/spaceRocksGamepad/ufo.wav"))
+        shieldHitSound = Gdx.audio.newSound(Gdx.files.internal("chapter13/spaceRocksGamepad/shieldHit.wav"))
 
-        music = Gdx.audio.newMusic(Gdx.files.internal("assets/epic-retro-synth-music.wav"))
+        music = Gdx.audio.newMusic(Gdx.files.internal("chapter13/spaceRocksGamepad/epic-retro-synth-music.wav"))
         music.isLooping = true
         music.volume = .75f
         music.play()
@@ -199,7 +199,7 @@ class LevelScreen : BaseGamepadScreen() {
         when (win) {
             true -> {
                 val messageWin = BaseActor(0f, 0f, uiStage)
-                messageWin.loadTexture("assets/message-win.png")
+                messageWin.loadTexture("chapter13/spaceRocksGamepad/message-win.png")
                 messageWin.centerAtPosition(400f, 300f)
                 messageWin.setOpacity(0f)
                 messageWin.addAction(Actions.fadeIn(1f))
@@ -208,7 +208,7 @@ class LevelScreen : BaseGamepadScreen() {
             }
             false -> {
                 val messageLose = BaseActor(0f, 0f, uiStage)
-                messageLose.loadTexture("assets/message-lose.png")
+                messageLose.loadTexture("chapter13/spaceRocksGamepad/message-lose.png")
                 messageLose.centerAtPosition(400f, 300f)
                 messageLose.setOpacity(0f)
                 messageLose.addAction(Actions.fadeIn(1f))

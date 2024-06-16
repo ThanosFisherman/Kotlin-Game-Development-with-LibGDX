@@ -12,13 +12,13 @@ class MenuScreen() : BaseScreen() {
 
     override fun initialize() {
         val background = BaseActor(0f, 0f, mainStage)
-        background.loadTexture("assets/overlay.png")
+        background.loadTexture("chapter14/overlay.png")
         background.width = Gdx.graphics.width.toFloat()
         background.height = Gdx.graphics.height.toFloat()
         background.color = Color.GOLDENROD
 
         val overlay = BaseActor(0f, 0f, uiStage)
-        overlay.loadTexture("assets/overlay.png")
+        overlay.loadTexture("chapter14/overlay.png")
         overlay.color = Color.BLACK
         overlay.width = Gdx.graphics.width.toFloat()
         overlay.height = Gdx.graphics.height.toFloat()

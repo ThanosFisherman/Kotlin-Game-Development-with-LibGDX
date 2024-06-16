@@ -41,7 +41,7 @@ class LevelScreen: BaseTouchScreen() {
     override fun initialize() {
         /*
         val ocean = BaseActor(0f, 0f, mainStage)
-        ocean.loadTexture("assets/water-border.jpg")
+        ocean.loadTexture("chapter13/starfishCollectorTouchscreen/water-border.jpg")
         ocean.setSize(1200f, 900f)
         BaseActor.setWorldBounds(ocean)
 
@@ -58,7 +58,7 @@ class LevelScreen: BaseTouchScreen() {
         turtle = Turtle(20f, 20f, mainStage)
         */
 
-        val tma = TilemapActor("assets/map.tmx", mainStage)
+        val tma = TilemapActor("chapter13/starfishCollectorTouchscreen/map.tmx", mainStage)
 
         for (obj in tma.getTileList("Rock")) {
             val props = obj.properties
@@ -92,7 +92,7 @@ class LevelScreen: BaseTouchScreen() {
 
         val buttonStyle = ButtonStyle()
 
-        val buttonTex = Texture(Gdx.files.internal("assets/undo.png"))
+        val buttonTex = Texture(Gdx.files.internal("chapter13/starfishCollectorTouchscreen/undo.png"))
         val buttonRegion = TextureRegion(buttonTex)
         buttonStyle.up = TextureRegionDrawable(buttonRegion)
 
@@ -110,7 +110,7 @@ class LevelScreen: BaseTouchScreen() {
         }
 
         val buttonStyle2 = ButtonStyle()
-        buttonStyle2.up = TextureRegionDrawable(TextureRegion(Texture("assets/pause.png")))
+        buttonStyle2.up = TextureRegionDrawable(TextureRegion(Texture("chapter13/starfishCollectorTouchscreen/pause.png")))
         val pauseButton = Button(buttonStyle2)
         pauseButton.color = Color.CYAN
         pauseButton.addListener { e: Event ->
@@ -122,7 +122,7 @@ class LevelScreen: BaseTouchScreen() {
         }
 
         val buttonStyle3 = ButtonStyle()
-        buttonStyle3.up = TextureRegionDrawable(TextureRegion((Texture("assets/audio.png"))))
+        buttonStyle3.up = TextureRegionDrawable(TextureRegion((Texture("chapter13/starfishCollectorTouchscreen/audio.png"))))
         val muteButton = Button(buttonStyle3)
         muteButton.color = Color.CYAN
         muteButton.addListener { e: Event ->
@@ -161,10 +161,10 @@ class LevelScreen: BaseTouchScreen() {
         uiTable.row()
         uiTable.add(dialogBox).colspan(6)
 
-        waterDrop = Gdx.audio.newSound(Gdx.files.internal("assets/Water_Drop.ogg"))
-        trumpet = Gdx.audio.newSound(Gdx.files.internal("assets/trumpet.mp3"))
-        instrumental = Gdx.audio.newMusic(Gdx.files.internal("assets/Master_of_the_Feast.ogg"))
-        oceanSurf = Gdx.audio.newMusic(Gdx.files.internal("assets/Ocean_Waves.ogg"))
+        waterDrop = Gdx.audio.newSound(Gdx.files.internal("chapter13/starfishCollectorTouchscreen/Water_Drop.ogg"))
+        trumpet = Gdx.audio.newSound(Gdx.files.internal("chapter13/starfishCollectorTouchscreen/trumpet.mp3"))
+        instrumental = Gdx.audio.newMusic(Gdx.files.internal("chapter13/starfishCollectorTouchscreen/Master_of_the_Feast.ogg"))
+        oceanSurf = Gdx.audio.newMusic(Gdx.files.internal("chapter13/starfishCollectorTouchscreen/Ocean_Waves.ogg"))
 
         audioVolume = 1f
         instrumental.isLooping = true
@@ -177,15 +177,15 @@ class LevelScreen: BaseTouchScreen() {
         Gdx.graphics.setWindowedMode(800, 800)
         initializeControlArea()
         val controlBackground = BaseActor(0f, 0f, controlStage)
-        controlBackground.loadTexture("assets/pixels.jpg")
+        controlBackground.loadTexture("chapter13/starfishCollectorTouchscreen/pixels.jpg")
 
         val touchStyle = TouchpadStyle()
 
-        val padKnobTex = Texture(Gdx.files.internal("assets/joystick-knob.png"))
+        val padKnobTex = Texture(Gdx.files.internal("chapter13/starfishCollectorTouchscreen/joystick-knob.png"))
         val padKnobReg = TextureRegion(padKnobTex)
         touchStyle.knob = TextureRegionDrawable(padKnobReg)
 
-        val padBackTex = Texture(Gdx.files.internal("assets/joystick-background.png"))
+        val padBackTex = Texture(Gdx.files.internal("chapter13/starfishCollectorTouchscreen/joystick-background.png"))
         val padBackReg = TextureRegion(padBackTex)
         touchStyle.background = TextureRegionDrawable(padBackReg)
 
@@ -223,7 +223,7 @@ class LevelScreen: BaseTouchScreen() {
                 win = true
                 trumpet.play()
                 val youWinMessage = BaseActor(0f, 0f, uiStage)
-                youWinMessage.loadTexture("assets/you-win.png")
+                youWinMessage.loadTexture("chapter13/starfishCollectorTouchscreen/you-win.png")
                 youWinMessage.centerAtPosition(400f, 300f)
                 youWinMessage.setOpacity(0f)
                 youWinMessage.addAction(Actions.delay(1f))
@@ -253,7 +253,7 @@ class LevelScreen: BaseTouchScreen() {
             if (time <= 0 && !win) {
                 win = false
                 val gameOver = BaseActor(0f, 0f, uiStage)
-                gameOver.loadTexture("assets/game-over.png")
+                gameOver.loadTexture("chapter13/starfishCollectorTouchscreen/game-over.png")
                 gameOver.centerAtPosition(400f, 300f)
                 gameOver.setOpacity(0f)
                 gameOver.addAction(Actions.delay(1f))

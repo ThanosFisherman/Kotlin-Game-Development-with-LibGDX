@@ -1,4 +1,4 @@
-package chapter15.starfishCollectorShaders
+package com.libgdx.example.lwjgl3.chapter15.starfishCollectorShaders
 
 import chapter15.starfishCollectorShaders.BaseGame
 import chapter15.starfishCollectorShaders.MenuScreen

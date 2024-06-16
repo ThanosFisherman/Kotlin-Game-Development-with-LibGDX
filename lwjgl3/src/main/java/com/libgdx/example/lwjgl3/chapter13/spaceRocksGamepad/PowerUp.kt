@@ -6,7 +6,7 @@ import com.badlogic.gdx.scenes.scene2d.actions.Actions
 
 class PowerUp(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     init {
-        loadTexture("assets/shields.png")
+        loadTexture("chapter13/spaceRocksGamepad/shields.png")
         setScale(Constants.scale*.35f, Constants.scale*.25f)
 
         setActions()

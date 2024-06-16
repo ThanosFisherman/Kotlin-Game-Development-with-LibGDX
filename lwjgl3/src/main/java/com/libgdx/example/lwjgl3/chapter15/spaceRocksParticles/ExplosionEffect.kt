@@ -1,3 +1,3 @@
 package chapter15.spaceRocksParticles
 
-class ExplosionEffect : ParticleActor("assets/explosion.pfx", "assets/") {}
+class ExplosionEffect : ParticleActor("chapter15/spaceRocksParticles/explosion.pfx", "chapter15/spaceRocksParticles/") {}

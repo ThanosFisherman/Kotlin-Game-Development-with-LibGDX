@@ -14,12 +14,12 @@ class Turtle(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
 
     init {
         val fileNames: Array<String> = Array()
-        fileNames.add("assets/turtle-1.png")
-        fileNames.add("assets/turtle-2.png")
-        fileNames.add("assets/turtle-3.png")
-        fileNames.add("assets/turtle-4.png")
-        fileNames.add("assets/turtle-5.png")
-        fileNames.add("assets/turtle-6.png")
+        fileNames.add("chapter13/starfishCollectorGamepad/turtle-1.png")
+        fileNames.add("chapter13/starfishCollectorGamepad/turtle-2.png")
+        fileNames.add("chapter13/starfishCollectorGamepad/turtle-3.png")
+        fileNames.add("chapter13/starfishCollectorGamepad/turtle-4.png")
+        fileNames.add("chapter13/starfishCollectorGamepad/turtle-5.png")
+        fileNames.add("chapter13/starfishCollectorGamepad/turtle-6.png")
         loadAnimationFromFiles(fileNames, .1f, true)
 
         setBoundaryPolygon(8)

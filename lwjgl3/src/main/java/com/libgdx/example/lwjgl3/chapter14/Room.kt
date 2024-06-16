@@ -21,7 +21,7 @@ class Room(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     var previousRoom: Room? = null
 
     init {
-        loadTexture("assets/dirt.png")
+        loadTexture("chapter14/dirt.png")
 
         val wallThickness = 6f // value is in pixels
 

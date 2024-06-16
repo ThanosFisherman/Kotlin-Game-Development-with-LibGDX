@@ -14,8 +14,8 @@ class VignetteBackground(x: Float, y: Float, texturePath: String, s: Stage) : Ba
         if (!texturePath.isBlank())
             loadTexture(texturePath)
 
-        vertexShaderCode = Gdx.files.internal("assets/shaders/vignette.vs").readString()
-        fragmenterShaderCode = Gdx.files.internal("assets/shaders/vignette.fs").readString()
+        vertexShaderCode = Gdx.files.internal("chapter15/starfishCollectorShaders/shaders/vignette.vs").readString()
+        fragmenterShaderCode = Gdx.files.internal("chapter15/starfishCollectorShaders/shaders/vignette.fs").readString()
         shaderProgram = ShaderProgram(vertexShaderCode, fragmenterShaderCode)
         if (!shaderProgram.isCompiled)
             println("Shader compile error: " + shaderProgram.log)

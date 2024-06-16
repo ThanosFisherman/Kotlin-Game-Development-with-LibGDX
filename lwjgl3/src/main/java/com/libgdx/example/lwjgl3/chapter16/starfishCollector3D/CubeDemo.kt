@@ -1,4 +1,4 @@
-package chapter16.starfishCollector3D
+package com.libgdx.example.lwjgl3.chapter16.starfishCollector3D
 
 import com.badlogic.gdx.ApplicationListener
 import com.badlogic.gdx.Gdx

@@ -13,13 +13,13 @@ class StoryScreen: BaseScreen() {
 
     override fun initialize() {
         val background = BaseActor(0f, 0f, mainStage)
-        background.loadTexture("assets/oceanside.png")
+        background.loadTexture("chapter13/starfishCollectorGamepad/oceanside.png")
         background.setSize(800f, 600f)
         background.setOpacity(0f)
         BaseActor.setWorldBounds(background)
 
         val turtle = BaseActor(0f, 0f, mainStage)
-        turtle.loadTexture("assets/turtle-big.png")
+        turtle.loadTexture("chapter13/starfishCollectorGamepad/turtle-big.png")
         turtle.setPosition(-turtle.width, 0f)
 
         val dialogBox = DialogBox(0f, 0f, uiStage)
@@ -31,14 +31,14 @@ class StoryScreen: BaseScreen() {
         uiTable.add(dialogBox).expandX().expandY().bottom()
 
         continueKey = BaseActor(0f, 0f, uiStage)
-        continueKey.loadTexture("assets/key-C.png")
+        continueKey.loadTexture("chapter13/starfishCollectorGamepad/key-C.png")
         continueKey.setSize(32f, 32f)
         continueKey.isVisible = false
 
         dialogBox.addActor(continueKey)
         continueKey.setPosition(dialogBox.width - continueKey.width, 0f)
 
-        backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal("assets/box-melody-1.mp3"))
+        backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal("chapter13/starfishCollectorGamepad/box-melody-1.mp3"))
         backgroundMusic.isLooping = true
         backgroundMusic.play()
 

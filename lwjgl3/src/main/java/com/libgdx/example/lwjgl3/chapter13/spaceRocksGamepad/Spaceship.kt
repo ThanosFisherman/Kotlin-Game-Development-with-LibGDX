@@ -19,7 +19,7 @@ class Spaceship(x: Float, y: Float, private val s: Stage) : BaseActor(x, y, s) {
     private lateinit var shootSound: Sound
 
     init {
-        loadTexture("assets/spaceship.png")
+        loadTexture("chapter13/spaceRocksGamepad/spaceship.png")
         setScale(Constants.scale, Constants.scale)
         setBoundaryPolygon(8)
 
@@ -36,8 +36,8 @@ class Spaceship(x: Float, y: Float, private val s: Stage) : BaseActor(x, y, s) {
         shield.centerAtPosition(width / 2, height / 2)
         shieldPower = 100
 
-        thrustersSound = Gdx.audio.newMusic(Gdx.files.internal("assets/thrusters.wav"))
-        shootSound = Gdx.audio.newSound(Gdx.files.internal("assets/shoot.wav"))
+        thrustersSound = Gdx.audio.newMusic(Gdx.files.internal("chapter13/spaceRocksGamepad/thrusters.wav"))
+        shootSound = Gdx.audio.newSound(Gdx.files.internal("chapter13/spaceRocksGamepad/shoot.wav"))
     }
 
     override fun act(dt: Float) {

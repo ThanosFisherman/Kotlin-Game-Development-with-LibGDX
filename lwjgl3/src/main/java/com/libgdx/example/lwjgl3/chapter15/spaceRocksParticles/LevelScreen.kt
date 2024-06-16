@@ -31,7 +31,7 @@ class LevelScreen : BaseScreen() {
 
     override fun initialize() {
         val space = BaseActor(0f, 0f, mainStage)
-        space.loadTexture("assets/space.png")
+        space.loadTexture("chapter15/spaceRocksParticles/space.png")
         space.setSize(800f, 600f)
 
         BaseActor.setWorldBounds(space)
@@ -46,15 +46,15 @@ class LevelScreen : BaseScreen() {
         /*Rock(200f, 300f, mainStage, 1.5f, 5f)
         Rock(200f, 500f, mainStage, 1.5f, 5f)*/
 
-        winSound = Gdx.audio.newSound(Gdx.files.internal("assets/congratulations.wav"))
-        explosionSound = Gdx.audio.newSound(Gdx.files.internal("assets/explosion.wav"))
-        shieldSound = Gdx.audio.newSound(Gdx.files.internal("assets/shield.wav"))
-        gameOverSound = Gdx.audio.newSound(Gdx.files.internal("assets/game-over.wav"))
-        warpSound = Gdx.audio.newSound(Gdx.files.internal("assets/warp.wav"))
-        ufoSound = Gdx.audio.newSound(Gdx.files.internal("assets/ufo.wav"))
-        shieldHitSound = Gdx.audio.newSound(Gdx.files.internal("assets/shieldHit.wav"))
+        winSound = Gdx.audio.newSound(Gdx.files.internal("chapter15/spaceRocksParticles/congratulations.wav"))
+        explosionSound = Gdx.audio.newSound(Gdx.files.internal("chapter15/spaceRocksParticles/explosion.wav"))
+        shieldSound = Gdx.audio.newSound(Gdx.files.internal("chapter15/spaceRocksParticles/shield.wav"))
+        gameOverSound = Gdx.audio.newSound(Gdx.files.internal("chapter15/spaceRocksParticles/game-over.wav"))
+        warpSound = Gdx.audio.newSound(Gdx.files.internal("chapter15/spaceRocksParticles/warp.wav"))
+        ufoSound = Gdx.audio.newSound(Gdx.files.internal("chapter15/spaceRocksParticles/ufo.wav"))
+        shieldHitSound = Gdx.audio.newSound(Gdx.files.internal("chapter15/spaceRocksParticles/shieldHit.wav"))
 
-        music = Gdx.audio.newMusic(Gdx.files.internal("assets/epic-retro-synth-music.wav"))
+        music = Gdx.audio.newMusic(Gdx.files.internal("chapter15/spaceRocksParticles/epic-retro-synth-music.wav"))
         music.isLooping = true
         music.volume = .75f
         music.play()
@@ -198,7 +198,7 @@ class LevelScreen : BaseScreen() {
         when (win) {
             true -> {
                 val messageWin = BaseActor(0f, 0f, uiStage)
-                messageWin.loadTexture("assets/message-win.png")
+                messageWin.loadTexture("chapter15/spaceRocksParticles/message-win.png")
                 messageWin.centerAtPosition(400f, 300f)
                 messageWin.setOpacity(0f)
                 messageWin.addAction(Actions.fadeIn(1f))
@@ -207,7 +207,7 @@ class LevelScreen : BaseScreen() {
             }
             false -> {
                 val messageLose = BaseActor(0f, 0f, uiStage)
-                messageLose.loadTexture("assets/message-lose.png")
+                messageLose.loadTexture("chapter15/spaceRocksParticles/message-lose.png")
                 messageLose.centerAtPosition(400f, 300f)
                 messageLose.setOpacity(0f)
                 messageLose.addAction(Actions.fadeIn(1f))

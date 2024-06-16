@@ -1,5 +1,6 @@
-package chapter16.rectangleDestroyer3D
+package com.libgdx.example.lwjgl3.chapter16.rectangleDestroyer3D
 
+import chapter16.rectangleDestroyer3D.BaseScreen
 import com.badlogic.gdx.Game
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.InputMultiplexer
@@ -33,7 +34,7 @@ abstract class BaseGame : Game() {
         var im = InputMultiplexer()
         Gdx.input.inputProcessor = im
 
-        val fontGenerator = FreeTypeFontGenerator(Gdx.files.internal("assets/OpenSans.ttf"))
+        val fontGenerator = FreeTypeFontGenerator(Gdx.files.internal("chapter16/rectangleDestroyer3D/OpenSans.ttf"))
         val fontParameters = FreeTypeFontParameter()
         fontParameters.size = 36
         fontParameters.color = Color.WHITE
@@ -47,10 +48,10 @@ abstract class BaseGame : Game() {
 
         labelStyle = LabelStyle()
         labelStyle!!.font = customFont
-        /*labelStyle!!.font = BitmapFont(Gdx.files.internal("assets/cooper.fnt"))*/
+        /*labelStyle!!.font = BitmapFont(Gdx.files.internal("chapter16/rectangleDestroyer3D/cooper.fnt"))*/
 
         textButtonStyle = TextButtonStyle()
-        val buttonTex = Texture(Gdx.files.internal("assets/button.png"))
+        val buttonTex = Texture(Gdx.files.internal("chapter16/rectangleDestroyer3D/button.png"))
         val buttonPatch = NinePatch(buttonTex, 24, 24, 24, 24)
         textButtonStyle!!.up = NinePatchDrawable(buttonPatch)
         textButtonStyle!!.font = customFont

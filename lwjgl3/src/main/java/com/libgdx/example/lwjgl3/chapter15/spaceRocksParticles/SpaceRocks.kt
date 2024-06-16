@@ -1,6 +1,5 @@
 package com.libgdx.example.lwjgl3.chapter15.spaceRocksParticles
 
-import chapter15.spaceRocksParticles.SpaceGame
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration
 

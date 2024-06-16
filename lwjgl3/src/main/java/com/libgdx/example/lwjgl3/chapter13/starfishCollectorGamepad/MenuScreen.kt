@@ -13,16 +13,16 @@ class MenuScreen: BaseScreen() {
 
     override fun initialize() {
         val ocean = BaseActor(0f, 0f, mainStage)
-        ocean.loadTexture("assets/water.jpg")
+        ocean.loadTexture("chapter13/starfishCollectorGamepad/water.jpg")
         ocean.setSize(800f, 600f)
 
         val title = BaseActor(0f, 0f, mainStage)
-        title.loadTexture("assets/starfish-collector.png")
+        title.loadTexture("chapter13/starfishCollectorGamepad/starfish-collector.png")
         /*title.centerAtPosition(400f, 300f)
         title.moveBy(0f, 100f)*/
 
         /*var start = BaseActor(0f, 0f, mainStage)
-        start.loadTexture("assets/message-start.png")
+        start.loadTexture("chapter13/starfishCollectorGamepad/message-start.png")
         start.centerAtPosition(400f, 300f)
         start.moveBy(0f, -100f)*/
 
@@ -55,7 +55,7 @@ class MenuScreen: BaseScreen() {
         uiTable.add(startButton)
         uiTable.add(quitButton)
 
-        backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal("assets/fantasy-orchestra.wav"))
+        backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal("chapter13/starfishCollectorGamepad/fantasy-orchestra.wav"))
         backgroundMusic.isLooping = true
         backgroundMusic.play()
     }

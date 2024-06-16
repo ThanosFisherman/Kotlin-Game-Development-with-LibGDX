@@ -19,15 +19,15 @@ class Starfish(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     var time = .0f
 
     init {
-        loadTexture("assets/starfish.png")
+        loadTexture("chapter15/starfishCollectorShaders/starfish.png")
         setBoundaryPolygon(8)
 
         // Actions
         val spin: Action = Actions.rotateBy(30.toFloat(), 1.toFloat())
         this.addAction(Actions.forever(spin))
 
-        vertexShaderCode = Gdx.files.internal("assets/shaders/default.vs").readString()
-        fragmenterShaderCode = Gdx.files.internal("assets/shaders/glow-pulse.fs").readString()
+        vertexShaderCode = Gdx.files.internal("chapter15/starfishCollectorShaders/shaders/default.vs").readString()
+        fragmenterShaderCode = Gdx.files.internal("chapter15/starfishCollectorShaders/shaders/glow-pulse.fs").readString()
         shaderProgram = ShaderProgram(vertexShaderCode, fragmenterShaderCode)
         if (!shaderProgram.isCompiled)
             println("Shader compile error: " + shaderProgram.log)

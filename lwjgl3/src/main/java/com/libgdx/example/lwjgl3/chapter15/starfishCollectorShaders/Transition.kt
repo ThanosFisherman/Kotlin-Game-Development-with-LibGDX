@@ -20,8 +20,8 @@ class Transition(x: Float, y: Float, assetPath: String, s: Stage) : BaseActor(x,
         loadTexture(assetPath)
         setSize(800f, 600f)
 
-        vertexShaderCode = Gdx.files.internal("assets/shaders/transition.vs").readString()
-        fragmenterShaderCode = Gdx.files.internal("assets/shaders/transition.fs").readString()
+        vertexShaderCode = Gdx.files.internal("chapter15/starfishCollectorShaders/shaders/transition.vs").readString()
+        fragmenterShaderCode = Gdx.files.internal("chapter15/starfishCollectorShaders/shaders/transition.fs").readString()
         shaderProgram = ShaderProgram(vertexShaderCode, fragmenterShaderCode)
         if (!shaderProgram.isCompiled)
             println("Shader compile error: " + shaderProgram.log)

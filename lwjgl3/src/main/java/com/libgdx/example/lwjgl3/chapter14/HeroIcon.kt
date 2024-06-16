@@ -9,8 +9,8 @@ class HeroIcon(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     val dead: Animation<TextureRegion>
 
     init {
-        loadTexture("assets/hero-icon-healthy.png")
-        dying = loadTexture("assets/hero-icon-dying.png")
-        dead = loadTexture("assets/hero-icon-dead.png")
+        loadTexture("chapter14/hero-icon-healthy.png")
+        dying = loadTexture("chapter14/hero-icon-dying.png")
+        dead = loadTexture("chapter14/hero-icon-dead.png")
     }
 }

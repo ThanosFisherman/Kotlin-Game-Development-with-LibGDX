@@ -1,4 +1,4 @@
-package chapter16.rectangleDestroyer3D
+package com.libgdx.example.lwjgl3.chapter16.rectangleDestroyer3D
 
 import com.badlogic.gdx.maps.MapLayer
 import com.badlogic.gdx.maps.MapObject

@@ -14,19 +14,19 @@ class MenuScreen : BaseScreen() {
     private lateinit var ocean: WaterBackground
 
     override fun initialize() {
-        ocean = WaterBackground(0f, 0f, "assets/water.jpg", mainStage)
+        ocean = WaterBackground(0f, 0f, "chapter15/starfishCollectorShaders/water.jpg", mainStage)
         ocean.setSize(800f, 600f)
 
-        val background = VignetteBackground(0f, 0f, "assets/opaqueWhite.png", mainStage)
+        val background = VignetteBackground(0f, 0f, "chapter15/starfishCollectorShaders/opaqueWhite.png", mainStage)
         background.setSize(800f, 600f)
 
         val title = BaseActor(0f, 0f, mainStage)
-        title.loadTexture("assets/starfish-collector.png")
+        title.loadTexture("chapter15/starfishCollectorShaders/starfish-collector.png")
         /*title.centerAtPosition(400f, 300f)
         title.moveBy(0f, 100f)*/
 
         /*var start = BaseActor(0f, 0f, mainStage)
-        start.loadTexture("assets/message-start.png")
+        start.loadTexture("chapter15/starfishCollectorShaders/message-start.png")
         start.centerAtPosition(400f, 300f)
         start.moveBy(0f, -100f)*/
 
@@ -35,7 +35,7 @@ class MenuScreen : BaseScreen() {
         uiStage.addActor(startButton)*/
         startButton.addListener { e: Event ->
             if (isTouchDownEvent(e)) {
-                val transition = Transition(0f, 0f, "assets/transition2.png", uiStage)
+                val transition = Transition(0f, 0f, "chapter15/starfishCollectorShaders/transition2.png", uiStage)
                 transition.enabled = true
                 transition.wayIn = true
                 ocean.addAction(
@@ -67,18 +67,18 @@ class MenuScreen : BaseScreen() {
         uiTable.add(startButton)
         uiTable.add(quitButton)
 
-        backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal("assets/fantasy-orchestra.wav"))
+        backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal("chapter15/starfishCollectorShaders/fantasy-orchestra.wav"))
         backgroundMusic.isLooping = true
         backgroundMusic.play()
 
-        val transition = Transition(0f, 0f, "assets/transition2.png", uiStage)
+        val transition = Transition(0f, 0f, "chapter15/starfishCollectorShaders/transition2.png", uiStage)
         transition.enabled = true
         transition.wayIn = false
     }
 
     override fun keyDown(keyCode: Int): Boolean {
         if (Gdx.input.isKeyPressed(Keys.ENTER)) {
-            val transition = Transition(0f, 0f, "assets/transition2.png", uiStage)
+            val transition = Transition(0f, 0f, "chapter15/starfishCollectorShaders/transition2.png", uiStage)
             transition.enabled = true
             transition.wayIn = true
             ocean.addAction(

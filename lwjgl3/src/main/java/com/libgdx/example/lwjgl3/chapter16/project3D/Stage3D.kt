@@ -1,4 +1,4 @@
-package chapter16.project3D
+package com.libgdx.example.lwjgl3.chapter16.project3D
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.Color
@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.g3d.ModelBatch
 import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute
 import com.badlogic.gdx.graphics.g3d.environment.DirectionalLight
 import com.badlogic.gdx.math.Vector3
+import com.libgdx.example.lwjgl3.chapter16.project3D.BaseActor3D
 import java.util.ArrayList;
 
 class Stage3D {

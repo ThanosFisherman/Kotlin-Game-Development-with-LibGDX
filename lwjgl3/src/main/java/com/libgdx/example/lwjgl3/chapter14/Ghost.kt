@@ -8,7 +8,7 @@ class Ghost(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     var actorSpeed = 50f
 
     init {
-        loadAnimationFromSheet("assets/ghost.png", 1, 3, .2f, true)
+        loadAnimationFromSheet("chapter14/ghost.png", 1, 3, .2f, true)
         setOpacity(.8f)
     }
 

@@ -1,3 +1,3 @@
 package chapter15.starfishCollectorShaders
 
-class DropletEffect : ParticleActor("assets/droplets.pfx", "assets/") {}
+class DropletEffect : ParticleActor("chapter15/starfishCollectorShaders/droplets.pfx", "chapter15/starfishCollectorShaders/") {}

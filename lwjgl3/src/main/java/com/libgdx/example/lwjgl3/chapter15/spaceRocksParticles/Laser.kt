@@ -17,7 +17,7 @@ class Laser(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     var time = .0f
 
     init {
-        loadTexture("assets/laser.png")
+        loadTexture("chapter15/spaceRocksParticles/laser.png")
         setScale(Constants.scale * .5f, Constants.scale * .5f)
 
         addAction(Actions.delay(1f))
@@ -28,8 +28,8 @@ class Laser(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
         setMaxSpeed(800f)
         setDeceleration(0f)
 
-        vertexShaderCode = Gdx.files.internal("assets/shaders/default.vs").readString()
-        fragmenterShaderCode = Gdx.files.internal("assets/shaders/glow-pulse.fs").readString()
+        vertexShaderCode = Gdx.files.internal("chapter15/spaceRocksParticles/shaders/default.vs").readString()
+        fragmenterShaderCode = Gdx.files.internal("chapter15/spaceRocksParticles/shaders/glow-pulse.fs").readString()
         shaderProgram = ShaderProgram(vertexShaderCode, fragmenterShaderCode)
         if (!shaderProgram.isCompiled)
             println("Shader compile error: " + shaderProgram.log)

@@ -8,7 +8,7 @@ private var s: Stage? = null
 
 class Whirlpool(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     init {
-        loadAnimationFromSheet("assets/whirlpool.png", 2, 5, .1f, false)
+        loadAnimationFromSheet("chapter13/starfishCollectorGamepad/whirlpool.png", 2, 5, .1f, false)
     }
 
     override fun act(dt: Float) {

@@ -1,6 +1,5 @@
 package com.libgdx.example.lwjgl3.chapter16.cubeDemo
 
-import chapter16.project3D.demoCube
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration
 
@@ -15,6 +14,6 @@ object DemoCubeLauncher {
                 setTitle("Cube Demo")
             }
 
-        Lwjgl3Application(demoCube(), config)
+        Lwjgl3Application(DemoCube(), config)
     }
 }

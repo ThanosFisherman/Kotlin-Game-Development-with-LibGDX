@@ -26,7 +26,7 @@ class Hero(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     private var invincibleTimer = 0f
 
     init {
-        val fileName = "assets/hero.png"
+        val fileName = "chapter14/hero.png"
         val rows = 4
         val cols = 3
         val texture = Texture(Gdx.files.internal(fileName), true)
@@ -65,8 +65,8 @@ class Hero(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
         setMaxSpeed(100f)
         setDeceleration(800f)
 
-        hurtSound = Gdx.audio.newSound(Gdx.files.internal("assets/hitHurt.wav"))
-        walkInGrassMusic = Gdx.audio.newMusic(Gdx.files.internal("assets/walkGrass.wav"))
+        hurtSound = Gdx.audio.newSound(Gdx.files.internal("chapter14/hitHurt.wav"))
+        walkInGrassMusic = Gdx.audio.newMusic(Gdx.files.internal("chapter14/walkGrass.wav"))
 
         zoomCamera(.9f)
     }

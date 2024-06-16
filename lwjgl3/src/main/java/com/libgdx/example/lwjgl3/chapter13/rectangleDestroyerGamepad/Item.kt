@@ -31,17 +31,17 @@ class Item(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
         type = t
 
         when (t) {
-            Type.PADDLE_EXPAND -> loadTexture("assets/items/paddle-expand.png")
-            Type.PADDLE_SHRINK -> loadTexture("assets/items/paddle-shrink.png")
-            Type.BALL_SPEED_UP -> loadTexture("assets/items/ball-speed-up.png")
-            Type.BALL_SPEED_DOWN -> loadTexture("assets/items/ball-speed-down.png")
-            Type.PADDLE_STOP -> loadTexture("assets/items/paddle-stop.png")
-            Type.BRICK_DESTROY -> loadTexture("assets/items/brick-destroy.png")
-            Type.BALL_LARGE -> loadTexture("assets/items/ball-large.png")
-            Type.BALL_SMALL -> loadTexture("assets/items/ball-small.png")
-            Type.BALL_EXTRA -> loadTexture("assets/items/ball-extra.png")
-            Type.BONUS_POINTS -> loadTexture("assets/items/bonus-points.png")
-            else -> loadTexture("assets/items/item-blank.png")
+            Type.PADDLE_EXPAND -> loadTexture("chapter13/rectangleDestroyerGamepad/items/paddle-expand.png")
+            Type.PADDLE_SHRINK -> loadTexture("chapter13/rectangleDestroyerGamepad/items/paddle-shrink.png")
+            Type.BALL_SPEED_UP -> loadTexture("chapter13/rectangleDestroyerGamepad/items/ball-speed-up.png")
+            Type.BALL_SPEED_DOWN -> loadTexture("chapter13/rectangleDestroyerGamepad/items/ball-speed-down.png")
+            Type.PADDLE_STOP -> loadTexture("chapter13/rectangleDestroyerGamepad/items/paddle-stop.png")
+            Type.BRICK_DESTROY -> loadTexture("chapter13/rectangleDestroyerGamepad/items/brick-destroy.png")
+            Type.BALL_LARGE -> loadTexture("chapter13/rectangleDestroyerGamepad/items/ball-large.png")
+            Type.BALL_SMALL -> loadTexture("chapter13/rectangleDestroyerGamepad/items/ball-small.png")
+            Type.BALL_EXTRA -> loadTexture("chapter13/rectangleDestroyerGamepad/items/ball-extra.png")
+            Type.BONUS_POINTS -> loadTexture("chapter13/rectangleDestroyerGamepad/items/bonus-points.png")
+            else -> loadTexture("chapter13/rectangleDestroyerGamepad/items/item-blank.png")
         }
     }
 

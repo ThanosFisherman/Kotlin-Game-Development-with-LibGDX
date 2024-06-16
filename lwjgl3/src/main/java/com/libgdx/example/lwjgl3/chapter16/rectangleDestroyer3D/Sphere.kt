@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.g3d.Material
 import com.badlogic.gdx.graphics.g3d.ModelInstance
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder
 import com.badlogic.gdx.math.Vector3
+import com.libgdx.example.lwjgl3.chapter16.rectangleDestroyer3D.Stage3D
 
 open class Sphere(x: Float, y: Float, z: Float, s: Stage3D) : BaseActor3D(x, y, z, s) {
     init {

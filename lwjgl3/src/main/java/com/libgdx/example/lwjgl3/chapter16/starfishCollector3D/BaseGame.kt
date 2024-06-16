@@ -1,5 +1,6 @@
-package chapter16.starfishCollector3D
+package com.libgdx.example.lwjgl3.chapter16.starfishCollector3D
 
+import chapter16.starfishCollector3D.BaseScreen
 import com.badlogic.gdx.Game
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.InputMultiplexer
@@ -23,7 +24,7 @@ abstract class BaseGame : Game() {
         val im = InputMultiplexer()
         Gdx.input.inputProcessor = im
 
-        val fontGenerator = FreeTypeFontGenerator(Gdx.files.internal("assets/OpenSans.ttf"))
+        val fontGenerator = FreeTypeFontGenerator(Gdx.files.internal("chapter16/starfishCollector3D/OpenSans.ttf"))
         val fontParameters = FreeTypeFontParameter()
         fontParameters.size = 36
         fontParameters.color = Color.WHITE

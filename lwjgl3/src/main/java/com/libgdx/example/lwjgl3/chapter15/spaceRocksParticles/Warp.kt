@@ -15,15 +15,15 @@ class Warp(x: Float, y: Float, s: Stage) : BaseActor(x, y, s) {
     var time = .0f
 
     init {
-        loadAnimationFromSheet("assets/warp.png", 4, 8, .05f, true)
+        loadAnimationFromSheet("chapter15/spaceRocksParticles/warp.png", 4, 8, .05f, true)
         setScale(Constants.scale, Constants.scale)
 
         addAction(Actions.delay(1f))
         addAction(Actions.after(Actions.fadeOut(.5f)))
         addAction(Actions.after(Actions.removeActor()))
 
-        vertexShaderCode = Gdx.files.internal("assets/shaders/default.vs").readString()
-        fragmenterShaderCode = Gdx.files.internal("assets/shaders/wave.fs").readString()
+        vertexShaderCode = Gdx.files.internal("chapter15/spaceRocksParticles/shaders/default.vs").readString()
+        fragmenterShaderCode = Gdx.files.internal("chapter15/spaceRocksParticles/shaders/wave.fs").readString()
         shaderProgram = ShaderProgram(vertexShaderCode, fragmenterShaderCode)
         if (!shaderProgram.isCompiled)
             println("Shader compile error: " + shaderProgram.log)

@@ -15,6 +15,7 @@ import com.badlogic.gdx.math.Intersector.MinimumTranslationVector
 import com.badlogic.gdx.math.collision.BoundingBox
 import com.badlogic.gdx.math.Intersector
 import com.badlogic.gdx.math.Vector3
+import com.libgdx.example.lwjgl3.chapter16.rectangleDestroyer3D.Stage3D
 
 open class BaseActor3D(x: Float, y: Float, z: Float, s: Stage3D) {
     private var modelData: ModelInstance?

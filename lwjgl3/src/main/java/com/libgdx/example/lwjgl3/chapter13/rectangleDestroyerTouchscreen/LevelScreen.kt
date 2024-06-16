@@ -47,7 +47,7 @@ class LevelScreen : BaseTouchScreen() {
     override fun initialize() {
         // background
         val background = BaseActor(0f, 0f, mainStage)
-        background.loadTexture("assets/space.png")
+        background.loadTexture("chapter13/rectangleDestroyerTouchscreen/space.png")
         BaseActor.setWorldBounds(background)
 
         // paddle
@@ -97,16 +97,16 @@ class LevelScreen : BaseTouchScreen() {
         uiTable.row()
         uiTable.add(messageLabel).colspan(3).expandY()
 
-        bounceSound = Gdx.audio.newSound((Gdx.files.internal(("assets/boing.wav"))))
-        brickBumpSound = Gdx.audio.newSound((Gdx.files.internal(("assets/bump.wav"))))
-        wallBumpSound = Gdx.audio.newSound((Gdx.files.internal(("assets/bump-low.wav"))))
-        itemAppearSound = Gdx.audio.newSound((Gdx.files.internal(("assets/swoosh.wav"))))
-        itemCollectSound = Gdx.audio.newSound((Gdx.files.internal(("assets/pop.wav"))))
-        gameOverSound = Gdx.audio.newSound((Gdx.files.internal(("assets/382310__myfox14__game-over-arcade.wav"))))
-        gameWin = Gdx.audio.newSound((Gdx.files.internal(("assets/391539__mativve__electro-win-sound.wav"))))
-        ballLost = Gdx.audio.newSound((Gdx.files.internal(("assets/159408__noirenex__life-lost-game-over.wav"))))
+        bounceSound = Gdx.audio.newSound((Gdx.files.internal(("chapter13/rectangleDestroyerTouchscreen/boing.wav"))))
+        brickBumpSound = Gdx.audio.newSound((Gdx.files.internal(("chapter13/rectangleDestroyerTouchscreen/bump.wav"))))
+        wallBumpSound = Gdx.audio.newSound((Gdx.files.internal(("chapter13/rectangleDestroyerTouchscreen/bump-low.wav"))))
+        itemAppearSound = Gdx.audio.newSound((Gdx.files.internal(("chapter13/rectangleDestroyerTouchscreen/swoosh.wav"))))
+        itemCollectSound = Gdx.audio.newSound((Gdx.files.internal(("chapter13/rectangleDestroyerTouchscreen/pop.wav"))))
+        gameOverSound = Gdx.audio.newSound((Gdx.files.internal(("chapter13/rectangleDestroyerTouchscreen/382310__myfox14__game-over-arcade.wav"))))
+        gameWin = Gdx.audio.newSound((Gdx.files.internal(("chapter13/rectangleDestroyerTouchscreen/391539__mativve__electro-win-sound.wav"))))
+        ballLost = Gdx.audio.newSound((Gdx.files.internal(("chapter13/rectangleDestroyerTouchscreen/159408__noirenex__life-lost-game-over.wav"))))
 
-        backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal(("assets/Rollin-at-5.mp3")))
+        backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal(("chapter13/rectangleDestroyerTouchscreen/Rollin-at-5.mp3")))
         backgroundMusic.isLooping = true
         backgroundMusic.volume = .5f
         backgroundMusic.play()
@@ -114,15 +114,15 @@ class LevelScreen : BaseTouchScreen() {
         Gdx.graphics.setWindowedMode(800, 800)
         initializeControlArea()
         val controlBackground = BaseActor(0f, 0f, controlStage)
-        controlBackground.loadTexture("assets/pixels.jpg")
+        controlBackground.loadTexture("chapter13/rectangleDestroyerTouchscreen/pixels.jpg")
 
         val touchStyle = TouchpadStyle()
-        touchStyle.knob = TextureRegionDrawable(TextureRegion(Texture(Gdx.files.internal("assets/joystick-knob.png"))))
-        touchStyle.background = TextureRegionDrawable(TextureRegion(Texture(Gdx.files.internal("assets/joystick-background.png"))))
+        touchStyle.knob = TextureRegionDrawable(TextureRegion(Texture(Gdx.files.internal("chapter13/rectangleDestroyerTouchscreen/joystick-knob.png"))))
+        touchStyle.background = TextureRegionDrawable(TextureRegion(Texture(Gdx.files.internal("chapter13/rectangleDestroyerTouchscreen/joystick-background.png"))))
         touchpad = Touchpad(5f, touchStyle)
 
         val buttonStyle = ButtonStyle()
-        buttonStyle.up = TextureRegionDrawable(TextureRegion(Texture("assets/nes_button.png")))
+        buttonStyle.up = TextureRegionDrawable(TextureRegion(Texture("chapter13/rectangleDestroyerTouchscreen/nes_button.png")))
 
         val releaseButton = Button(buttonStyle)
         releaseButton.addListener { e: Event ->

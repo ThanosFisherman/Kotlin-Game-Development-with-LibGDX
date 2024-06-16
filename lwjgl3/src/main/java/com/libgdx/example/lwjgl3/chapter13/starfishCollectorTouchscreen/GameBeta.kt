@@ -1,4 +1,4 @@
-package chapter13.starfishCollectorTouchscreen
+package com.libgdx.example.lwjgl3.chapter13.starfishCollectorTouchscreen
 
 import com.badlogic.gdx.Game
 import com.badlogic.gdx.Gdx
